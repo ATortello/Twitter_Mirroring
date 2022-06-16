@@ -8,4 +8,24 @@
     <string name="bnvNotifications">Notifications</string>
     <string name="bnvDirectMessages">Messages</string>
 
+    <!-- Labels for Content Tweet -->
+    <string name="contentTweetText">Éste es un texto de prueba para contabilizar las líneas que puede tener un tweet, espero no pasarme de 140 caracteres.</string>
+    <string name="optionTranslateTweetText">Translate Tweet</string>
+    <string name="dateAndDeviceText">16:22 · 28 Jun 2022 · Twitter for Android</string>
+    
+    <!-- Time / Device names -->
+    <string name="hour">16:22</string>
+    <string name="separatorDot">·</string>
+    <string name="date">28 Jun 2022</string>
+    <string name="device">Twitter for Android</string>
+
+    <!-- Indicators names -->
+    <string name="cantRetweets">123</string>
+    <string name="labelCantRetweets">Retweets</string>
+    <string name="cantQuoteTweets">123</string>
+    <string name="labelcantQuoteTweets">Quote Tweet</string>
+    <string name="cantTweetLikes">123</string>
+    <string name="labelcantTweetLikes">Likes</string>
+
+
 </resources>
