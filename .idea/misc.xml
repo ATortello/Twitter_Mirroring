@@ -5,9 +5,23 @@
       <map>
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/Twitter_Mirroring/app/src/main/res/layout/activity_main.xml" value="0.26975683890577506" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/Twitter_Mirroring/app/src/main/res/layout/activity_splashscreen.xml" value="0.35778985507246375" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/activity_main.xml" value="0.26975683890577506" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/activity_splashscreen.xml" value="0.3115942028985507" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/menu/bnv_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_home.xml" value="0.2135" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_home_selected.xml" value="0.116" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_home_unselected.xml" value="0.116" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_icons_twitter.xml" value="0.2135" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_mail_unselected.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_mic_unselected.xml" value="0.2135" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_notifications.xml" value="0.3105" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_notifications_selected.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_notifications_unselected.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_search.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_search_24.xml" value="0.2135" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_search_selected.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_topTweets_white_logo.xml" value="0.3075" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/drawable/ic_twitter_white_logo.xml" value="0.19" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/activity_main.xml" value="0.4546296296296296" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/activity_splashscreen.xml" value="0.26975683890577506" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/menu/bnv_menu.xml" value="0.30925925925925923" />
       </map>
     </option>
   </component>

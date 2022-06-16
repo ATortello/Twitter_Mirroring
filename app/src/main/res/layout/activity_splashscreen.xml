@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/ivLogoTwitter"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/widthLogoTwitter"
         android:layout_height="@dimen/heightLogoTwitter"
-        android:src="@drawable/twitter_white_logo"
+        android:src="@drawable/ic_twitter_white_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

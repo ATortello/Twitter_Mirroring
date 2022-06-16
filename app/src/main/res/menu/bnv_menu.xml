@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navHomeFragment"
+        android:title="@string/bnvHome"
+        android:icon="@drawable/ic_01_home_unselected"/>
 
+    <item
+        android:id="@+id/navSearchFragment"
+        android:title="@string/bnvSearch"
+        android:icon="@drawable/ic_02_search_unselected"/>
+
+    <item
+        android:id="@+id/navSpacesFragment"
+        android:title="@string/bnvSpaces"
+        android:icon="@drawable/ic_03_mic_unselected"/>
+
+    <item
+        android:id="@+id/navNotificationsFragment"
+        android:title="@string/bnvNotifications"
+        android:icon="@drawable/ic_04_notifications_unselected"/>
+
+    <item
+        android:id="@+id/navDirectMessagesFragment"
+        android:title="@string/bnvDirectMessages"
+        android:icon="@drawable/ic_05_messages_unselected"/>
 </menu>

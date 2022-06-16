@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Twitter_Mirroring</string>
+
+    <!-- Menu names -->
+    <string name="bnvHome">Home</string>
+    <string name="bnvSearch">Search</string>
+    <string name="bnvSpaces">Spaces</string>
+    <string name="bnvNotifications">Notifications</string>
+    <string name="bnvDirectMessages">Messages</string>
+
 </resources>
