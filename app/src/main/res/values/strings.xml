@@ -8,24 +8,27 @@
     <string name="bnvNotifications">Notifications</string>
     <string name="bnvDirectMessages">Messages</string>
 
-    <!-- Labels for Content Tweet -->
-    <string name="contentTweetText">Éste es un texto de prueba para contabilizar las líneas que puede tener un tweet, espero no pasarme de 140 caracteres.</string>
-    <string name="optionTranslateTweetText">Translate Tweet</string>
-    <string name="dateAndDeviceText">16:22 · 28 Jun 2022 · Twitter for Android</string>
-    
-    <!-- Time / Device names -->
-    <string name="hour">16:22</string>
+    <!-- Common info: User public name and Real Username texts -->
+    <string name="publicUserName">Brais Moure </string>
+    <string name="realUserName">"&#x40;MoureDev"</string>
+
+    <!-- Common info: Time / Device texts -->
+    <string name="hour">7:49 AM</string>
     <string name="separatorDot">·</string>
-    <string name="date">28 Jun 2022</string>
+    <string name="date">Jun 16, 2022</string>
     <string name="device">Twitter for Android</string>
 
-    <!-- Indicators names -->
-    <string name="cantRetweets">123</string>
+    <!-- Common info: Indicators texts -->
+    <string name="cantRetweets">120</string>
     <string name="labelCantRetweets">Retweets</string>
-    <string name="cantQuoteTweets">123</string>
+    <string name="cantQuoteTweets">12</string>
     <string name="labelcantQuoteTweets">Quote Tweet</string>
-    <string name="cantTweetLikes">123</string>
+    <string name="cantTweetLikes">963</string>
     <string name="labelcantTweetLikes">Likes</string>
 
+    <!-- Labels for Content Tweet only Text-->
+    <string name="contentTweetText">"Qué pena ver tantos palos entre devs.\n\nLo tengo claro:\n\nCualquier persona que esté dispuesta a compartir lo aprendido para ayudar al resto (independientemente de su grado de conocimiento), vale infinito más que la opinión de &#x22;Paco_75&#x22; esforzándose en decirte que sabe más que tú."</string>
+    <string name="optionTranslateTweetText">Translate Tweet</string>
+    <string name="dateText">16:22 · 28 Jun 2022 · </string>
 
 </resources>
