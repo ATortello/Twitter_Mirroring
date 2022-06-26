@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary">
 
     <TextView
-        android:id="@+id/tvTweetContent"
+        android:id="@+id/tvTweetText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/contentTweetText"

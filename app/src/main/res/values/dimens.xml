@@ -11,10 +11,12 @@
 
     <dimen name="indicatorsTextSize">14sp</dimen>
 
+    <!-- Sizes for 4-image tweets -->
+    <dimen name="imageOrGifWidth">376dp</dimen>
+    <dimen name="imageOrGifHeight">210dp</dimen>
+    <dimen name="imageWidth">183</dimen>
+    <dimen name="imageHeight">100</dimen>
+
     <!-- Size for One Image or One Gif -->
-    <dimen name="imageOrGifWidth">316dp</dimen>
-    <dimen name="imageOrGifHeight">160dp</dimen>
-
-    <!-- Weights for Toolbar's elements on Activity_main -->
-
+    <dimen name="cardCornerRadius">10dp</dimen>
 </resources>
