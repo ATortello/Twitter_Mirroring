@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-        android:id="@+id/rvTweetFourImages"
-        android:id="@+id/rlBaseTweetFourImages"
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/ivUpperLeftImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/imageOrGifHeight"
+                    android:src="@drawable/ic_twitter_app_logo"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/ivUpperRightImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/imageOrGifHeight"
+                    android:src="@drawable/ic_twitter_app_logo"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/ivLowerLeftImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/imageOrGifHeight"
+                    android:src="@drawable/ic_twitter_app_logo"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/ivLowerRightImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/imageOrGifHeight"
+                    android:src="@drawable/ic_twitter_app_logo"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+</LinearLayout>
