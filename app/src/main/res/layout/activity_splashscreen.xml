@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.SplashscreenActivity"
+    tools:context=".view.activities.SplashscreenActivity"
     android:background="@color/splashScreenColor">
 
     <ImageView
-        android:id="@+id/ivLogoTwitter"
+        android:id="@+id/ivTwitterLogo"
         android:layout_width="@dimen/widthLogoTwitter"
         android:layout_height="@dimen/heightLogoTwitter"
         android:src="@drawable/ic_twitter_white_logo"

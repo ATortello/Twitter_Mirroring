@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeightSize"
+        android:background="@color/colorAccent"/>
+
+    <LinearLayout
+        android:id="@+id/llFeedTweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_picture"
+            android:layout_weight="1"
+            android:layout_gravity="start"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="32"
+            android:layout_marginStart="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPublicName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publicUserName"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/ivVerifiedAccountLogo"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_verified_account_white_logo"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvRealName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/realUserName"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmptyTweet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyTweetText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/contentTweetText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageView
+                    android:id="@+id/ivReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:src="@drawable/ic_reply_gray_logo"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvNumberReplies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cantRetweets"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/indicatorsTextSize"
+                    android:gravity="left"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:id="@+id/ivRetweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:src="@drawable/ic_retweet_gray_logo"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvNumberRetweets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cantRetweets"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/indicatorsTextSize"
+                    android:gravity="left"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:id="@+id/ivLikeTweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:src="@drawable/ic_like_gray_logo"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvNumberLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cantRetweets"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/indicatorsTextSize"
+                    android:gravity="left"
+                    android:layout_weight="2"/>
+
+                <ImageView
+                    android:id="@+id/ivShareTweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:src="@drawable/ic_share_gray_logo"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvNumberShares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cantRetweets"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/indicatorsTextSize"
+                    android:gravity="left"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeightSize"
+        android:background="@color/colorAccent"/>
+</LinearLayout>

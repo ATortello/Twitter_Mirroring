@@ -1,10 +1,11 @@
-package com.example.twitter_mirroring.ui.activities
+package com.example.twitter_mirroring.view.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.example.twitter_mirroring.MainActivity
 import com.example.twitter_mirroring.R
 
 class SplashscreenActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class SplashscreenActivity : AppCompatActivity() {
 
         //Adding animation to Twitter's Logo when starting app
         val onStartAppAnimation = AnimationUtils.loadAnimation(this, R.anim.animation)
-        ivLogoTwitter.startAnimation(onStartAppAnimation)
+        ivTwitterLogo.startAnimation(onStartAppAnimation)
 
         //Adding action when animation ends to sent user to Main Activity screen
         val intent = Intent(this, MainActivity::class.java)

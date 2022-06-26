@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Twitter_Mirroring</string>
+    <string name="app_name">Twitter\nMirroring</string>
 
     <!-- Menu names -->
     <string name="bnvHome">Home</string>
@@ -9,7 +9,7 @@
     <string name="bnvDirectMessages">Messages</string>
 
     <!-- Common info: User public name and Real Username texts -->
-    <string name="publicUserName">Brais Moure </string>
+    <string name="publicUserName">Brais Moure</string>
     <string name="realUserName">"&#x40;MoureDev"</string>
 
     <!-- Common info: Time / Device texts -->
@@ -28,6 +28,7 @@
 
     <!-- Labels for Content Tweet only Text-->
     <string name="contentTweetText">"Qué pena ver tantos palos entre devs.\n\nLo tengo claro:\n\nCualquier persona que esté dispuesta a compartir lo aprendido para ayudar al resto (independientemente de su grado de conocimiento), vale infinito más que la opinión de &#x22;Paco_75&#x22; esforzándose en decirte que sabe más que tú."</string>
+    <string name="emptyTweetText"></string>
     <string name="optionTranslateTweetText">Translate Tweet</string>
     <string name="dateText">16:22 · 28 Jun 2022 · </string>
 
