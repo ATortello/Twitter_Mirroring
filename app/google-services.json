@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "101496372486",
+    "project_id": "twitter-mirroring",
+    "storage_bucket": "twitter-mirroring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101496372486:android:c9bf88c9a1d981444b3287",
+        "android_client_info": {
+          "package_name": "com.example.twitter_mirroring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101496372486-4f7038nv33hhd4toc95c0jlmdanis318.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.twitter_mirroring",
+            "certificate_hash": "732bd805e3e5b462cc7e0128a75726449354eec9"
+          }
+        },
+        {
+          "client_id": "101496372486-upgi3vd0vef94h3cj6rqshpco830l0b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVFrt3rT44-HbSwj3zIW-qJvt2CFDxYIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101496372486-upgi3vd0vef94h3cj6rqshpco830l0b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

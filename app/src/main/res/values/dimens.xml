@@ -13,7 +13,7 @@
 
     <!-- Sizes for 4-image tweets -->
     <dimen name="imageOrGifWidth">376dp</dimen>
-    <dimen name="imageOrGifHeight">210dp</dimen>
+    <dimen name="imageOrGifHeight">200dp</dimen>
     <dimen name="imageWidth">183</dimen>
     <dimen name="imageHeight">100</dimen>
 
