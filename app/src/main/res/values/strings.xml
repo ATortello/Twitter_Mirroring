@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Twitter\nMirroring</string>
 
-    <!-- Menu names -->
+    <!-- Menu names for BottomNavigationView component in Main Activity screen -->
     <string name="bnvHome">Home</string>
     <string name="bnvSearch">Search</string>
     <string name="bnvSpaces">Spaces</string>
@@ -31,5 +31,7 @@
     <string name="emptyTweetText"></string>
     <string name="optionTranslateTweetText">Translate Tweet</string>
     <string name="dateText">16:22 · 28 Jun 2022 · </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

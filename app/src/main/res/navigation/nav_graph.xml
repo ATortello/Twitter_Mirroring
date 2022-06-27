@@ -3,9 +3,88 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navHomeFragment">
 
+    <!-- Fragments for main options on BottomNavigationView -->
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_tweetOnlyTextDetailDialogFragment"
+            app:destination="@id/tweetOnlyTextDetailDialogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/navSearchFragment" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/navSearchFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_spacesFragment"
+            app:destination="@id/navSpacesFragment" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/navSpacesFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.SpacesFragment"
+        android:label="fragment_spaces"
+        tools:layout="@layout/fragment_spaces" >
+        <action
+            android:id="@+id/action_spacesFragment_to_notificationsFragment"
+            app:destination="@id/navNotificationsFragment" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/navNotificationsFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_messagesFragment"
+            app:destination="@id/navDirectMessagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDirectMessagesFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+
+    <!-- Fragments for specified types of tweets -->
+    <fragment
+        android:id="@+id/tweetOnlyTextDetailDialogFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetOnlyTextDetailDialogFragment"
+        android:label="TweetOnlyTextDetailDialogFragment" >
+        <action
+            android:id="@+id/action_tweetOnlyTextDetailDialogFragment_to_tweetWithFourImagesDetailDialogFragment"
+            app:destination="@id/tweetWithFourImagesDetailDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tweetWithFourImagesDetailDialogFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithFourImagesDetailDialogFragment"
+        android:label="TweetWithFourImagesDetailDialogFragment" >
+        <action
+            android:id="@+id/action_tweetWithFourImagesDetailDialogFragment_to_tweetWithGifDetailDialogFragment"
+            app:destination="@id/tweetWithGifDetailDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tweetWithGifDetailDialogFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithGifDetailDialogFragment"
+        android:label="TweetWithGifDetailDialogFragment" >
+        <action
+            android:id="@+id/action_tweetWithGifDetailDialogFragment_to_tweetWithOneImageDetailDialogFragment"
+            app:destination="@id/tweetWithOneImageDetailDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tweetWithOneImageDetailDialogFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithOneImageDetailDialogFragment"
+        android:label="TweetWithOneImageDetailDialogFragment" />
 </navigation>
