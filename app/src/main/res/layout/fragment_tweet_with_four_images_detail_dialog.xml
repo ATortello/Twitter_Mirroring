@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <Toolbar
-            android:id="@+id/toolBarTweetWithFourImages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.appbar.AppBarLayout>
+<!--        <Toolbar-->
+<!--            android:id="@+id/toolBarTweetWithFourImages"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <LinearLayout
         android:id="@+id/llTweetWithFourImages"
@@ -40,7 +40,7 @@
                 android:id="@+id/ivTweetWithFourImages_UserInfo_ProfilePicture"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/profile_picture"
+                android:src="@drawable/padme_amidala"
                 android:layout_weight="1"
                 android:layout_gravity="center"/>
 
@@ -60,7 +60,7 @@
                         android:id="@+id/tvTweetWithFourImages_UserInfo_PublicName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/publicUserName"
+                        android:text="Padmé Amidala"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
 
@@ -76,7 +76,7 @@
                     android:id="@+id/tvTweetWithFourImages_UserInfo_RealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/realUserName"
+                    android:text="@padmeamidala"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
@@ -85,7 +85,7 @@
             android:id="@+id/tvTweetWithFourImages_TweetContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/contentTweetText"
+            android:text="“you are strong and wise, and i am very proud of you.”"
             android:textColor="@color/white"
             android:textSize="@dimen/contentTweetText"
             android:layout_marginStart="10dp"
@@ -121,7 +121,7 @@
                         android:id="@+id/ivUpperLeftImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/green_background"
+                        android:src="@drawable/padme_1"
                         android:scaleType="centerCrop"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"/>
@@ -130,7 +130,7 @@
                         android:id="@+id/ivUpperRightImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/green_background"
+                        android:src="@drawable/padme_2"
                         android:scaleType="centerCrop"
                         android:layout_weight="1"/>
                 </LinearLayout>
@@ -144,7 +144,7 @@
                         android:id="@+id/ivLowerLeftImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/green_background"
+                        android:src="@drawable/padme_3"
                         android:scaleType="centerCrop"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"/>
@@ -153,7 +153,7 @@
                         android:id="@+id/ivLowerRightImage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/green_background"
+                        android:src="@drawable/padme_4"
                         android:scaleType="centerCrop"
                         android:layout_weight="1"/>
                 </LinearLayout>
@@ -172,7 +172,7 @@
                 android:id="@+id/tvTweetWithFourImages_DateAndDeviceInfo_Hour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hour"
+                android:text="9:50PM"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/dateAndDeviceTextSize"/>
 
@@ -190,7 +190,7 @@
                 android:id="@+id/tvTweetWithFourImages_DateAndDeviceInfo_Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/date"
+                android:text="Jun 27, 2022"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/dateAndDeviceTextSize"/>
 
@@ -230,7 +230,7 @@
                 android:id="@+id/tvTweetWithFourImages_Metrics_CantRetweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantRetweets"
+                android:text="254"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>
@@ -248,7 +248,7 @@
                 android:id="@+id/tvTweetWithFourImages_Metrics_CantQuoteTweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantQuoteTweets"
+                android:text="1"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>
@@ -266,7 +266,7 @@
                 android:id="@+id/tvTweetWithFourImages_Metrics_CantLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantTweetLikes"
+                android:text="1,644"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>

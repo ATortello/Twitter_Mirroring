@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <Toolbar
-            android:id="@+id/toolBarTweetWithOneGif"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.appbar.AppBarLayout>
+<!--        <Toolbar-->
+<!--            android:id="@+id/toolBarTweetWithOneGif"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <LinearLayout
         android:id="@+id/llTweetWithOneGif"
@@ -40,7 +40,7 @@
                 android:id="@+id/ivTweetWithOneGif_UserInfo_ProfilePicture"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/profile_picture"
+                android:src="@drawable/obi_wan_kenobi"
                 android:layout_weight="1"
                 android:layout_gravity="center"/>
 
@@ -60,7 +60,7 @@
                         android:id="@+id/tvTweetWithOneGif_UserInfo_PublicName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/publicUserName"
+                        android:text="Obi-Wan Kenobi"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
 
@@ -76,17 +76,16 @@
                     android:id="@+id/tvTweetWithOneGif_UserInfo_RealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/realUserName"
+                    android:text="@obiwankenobi"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvTweetWithOneGif_TweetContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/contentTweetText"
-            android:textColor="@color/white"
+            android:text="#ObiWanKenobi"
+            android:textColor="@color/hashtagColor"
             android:textSize="@dimen/contentTweetText"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"/>
@@ -149,7 +148,7 @@
                 android:id="@+id/tvTweetWithOneGif_DateAndDeviceInfo_Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/date"
+                android:text="Jan 10, 2017"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/dateAndDeviceTextSize"/>
 
@@ -189,7 +188,7 @@
                 android:id="@+id/tvTweetWithOneGif_Metrics_CantRetweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantRetweets"
+                android:text="1,173"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>
@@ -207,7 +206,7 @@
                 android:id="@+id/tvTweetWithOneGif_Metrics_CantQuoteTweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantQuoteTweets"
+                android:text="163"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>
@@ -225,7 +224,7 @@
                 android:id="@+id/tvTweetWithOneGif_Metrics_CantLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantTweetLikes"
+                android:text="7,779"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>

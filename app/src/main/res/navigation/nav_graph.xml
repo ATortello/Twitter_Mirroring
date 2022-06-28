@@ -12,8 +12,17 @@
         android:name="com.example.twitter_mirroring.view.ui.fragments.HomeFragment"
         android:label="HomeFragment" >
         <action
-            android:id="@+id/action_homeFragment_to_tweetOnlyTextDetailDialogFragment"
+            android:id="@+id/action_navHomeFragment_to_tweetOnlyTextDetailDialogFragment"
             app:destination="@id/tweetOnlyTextDetailDialogFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_tweetWithGifDetailDialogFragment"
+            app:destination="@id/tweetWithGifDetailDialogFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_tweetWithOneImageDetailDialogFragment"
+            app:destination="@id/tweetWithOneImageDetailDialogFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_tweetWithFourImagesDetailDialogFragment"
+            app:destination="@id/tweetWithFourImagesDetailDialogFragment" />
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/navSearchFragment" />
@@ -59,29 +68,17 @@
     <fragment
         android:id="@+id/tweetOnlyTextDetailDialogFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.TweetOnlyTextDetailDialogFragment"
-        android:label="TweetOnlyTextDetailDialogFragment" >
-        <action
-            android:id="@+id/action_tweetOnlyTextDetailDialogFragment_to_tweetWithFourImagesDetailDialogFragment"
-            app:destination="@id/tweetWithFourImagesDetailDialogFragment" />
-    </fragment>
+        android:label="TweetOnlyTextDetailDialogFragment" />
 
     <fragment
         android:id="@+id/tweetWithFourImagesDetailDialogFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithFourImagesDetailDialogFragment"
-        android:label="TweetWithFourImagesDetailDialogFragment" >
-        <action
-            android:id="@+id/action_tweetWithFourImagesDetailDialogFragment_to_tweetWithGifDetailDialogFragment"
-            app:destination="@id/tweetWithGifDetailDialogFragment" />
-    </fragment>
+        android:label="TweetWithFourImagesDetailDialogFragment" />
 
     <fragment
         android:id="@+id/tweetWithGifDetailDialogFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithGifDetailDialogFragment"
-        android:label="TweetWithGifDetailDialogFragment" >
-        <action
-            android:id="@+id/action_tweetWithGifDetailDialogFragment_to_tweetWithOneImageDetailDialogFragment"
-            app:destination="@id/tweetWithOneImageDetailDialogFragment" />
-    </fragment>
+        android:label="TweetWithGifDetailDialogFragment" />
 
     <fragment
         android:id="@+id/tweetWithOneImageDetailDialogFragment"

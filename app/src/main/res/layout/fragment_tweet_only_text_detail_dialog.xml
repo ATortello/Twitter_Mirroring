@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <Toolbar
-            android:id="@+id/toolBarOnlyTextTweet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.appbar.AppBarLayout>
+<!--        <Toolbar-->
+<!--            android:id="@+id/toolBarOnlyTextTweet"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <LinearLayout
         android:id="@+id/llOnlyTextTweet"
@@ -24,10 +24,10 @@
         android:orientation="vertical"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/viewHeightSize"
-            android:background="@color/colorAccent"/>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/viewHeightSize"-->
+<!--            android:background="@color/colorAccent"/>-->
 
         <LinearLayout
             android:id="@+id/llOnlyTextTweet_UserInfo"
@@ -40,7 +40,7 @@
                 android:id="@+id/ivOnlyTextTweet_UserInfo_ProfilePicture"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/profile_picture"
+                android:src="@drawable/darth_vader"
                 android:layout_weight="1"
                 android:layout_gravity="center"/>
 
@@ -60,23 +60,23 @@
                         android:id="@+id/tvOnlyTextTweet_UserInfo_PublicName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/publicUserName"
+                        android:text="Darth Vader"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
 
-                    <ImageView
-                        android:id="@+id/ivOnlyTextTweet_UserInfo_VerifiedAccountLogo"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/ic_verified_account_white_logo"
-                        android:layout_gravity="center"/>
+<!--                    <ImageView-->
+<!--                        android:id="@+id/ivOnlyTextTweet_UserInfo_VerifiedAccountLogo"-->
+<!--                        android:layout_width="16dp"-->
+<!--                        android:layout_height="16dp"-->
+<!--                        android:src="@drawable/ic_verified_account_white_logo"-->
+<!--                        android:layout_gravity="center"/>-->
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvOnlyTextTweet_UserInfo_RealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/realUserName"
+                    android:text="@DarthVader"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
@@ -85,8 +85,17 @@
             android:id="@+id/tvOnlyTextTweet_TweetContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/contentTweetText"
+            android:text="I love the title, as you can imagine."
             android:textColor="@color/white"
+            android:textSize="@dimen/contentTweetText"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#TheLastJedi"
+            android:textColor="@color/hashtagColor"
             android:textSize="@dimen/contentTweetText"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"/>
@@ -132,7 +141,7 @@
                 android:id="@+id/tvOnlyTextTweet_DateAndDeviceInfo_Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/date"
+                android:text="Jan 23, 2017"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/dateAndDeviceTextSize"/>
 
@@ -172,7 +181,7 @@
                 android:id="@+id/tvOnlyTextTweet_Metrics_CantRetweets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantRetweets"
+                android:text="943"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>
@@ -208,7 +217,7 @@
                 android:id="@+id/tvOnlyTextTweet_Metrics_CantLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cantTweetLikes"
+                android:text="3,403"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/indicatorsTextSize"/>

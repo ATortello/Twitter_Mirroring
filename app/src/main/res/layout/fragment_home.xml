@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200">
+    android:background="@color/colorAccent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_height="40dp"
                     android:src="@drawable/darth_vader"
                     android:layout_weight="1"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="start"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -663,155 +663,6 @@
 
                         <TextView
                             android:id="@+id/tvNumberShares_Tweet_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text=""
-                            android:textColor="@color/colorAccent"
-                            android:layout_marginStart="1dp"
-                            android:layout_marginEnd="10dp"
-                            android:textSize="@dimen/indicatorsTextSize"
-                            android:gravity="left"
-                            android:layout_weight="2"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Tweet No. 5 -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/cardCornerRadius"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/colorPrimary">
-                <LinearLayout
-                android:id="@+id/llFeedTweet_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp">
-
-                <ImageView
-                    android:id="@+id/ivProfilePicture_Tweet_5"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/kamala_profile_pic"
-                    android:layout_weight="1"
-                    android:layout_gravity="start"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="32"
-                    android:layout_marginStart="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tvPublicName_Tweet_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Vice President Kamala Harris"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"/>
-
-                        <ImageView
-                            android:id="@+id/ivVerifiedAccountLogo_Tweet_5"
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:src="@drawable/ic_verified_account_white_logo"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="2dp"
-                            android:layout_marginEnd="5dp"/>
-
-                        <TextView
-                            android:id="@+id/tvRealName_Tweet_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@VP · 1h"
-                            android:textColor="@color/colorAccent"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/tvEmptyTweet_Tweet_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="What happened on Friday was a complete dismantling of reproductive freedom by the Supreme Court. Right now, we are fighting to restore what the Court took away."
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/contentTweetText"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/heightTweetActions"
-                            android:src="@drawable/ic_reply_gray_logo"
-                            android:layout_weight="1"/>
-
-                        <TextView
-                            android:id="@+id/tvNumberReplies_Tweet_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="275"
-                            android:textColor="@color/colorAccent"
-                            android:layout_marginStart="1dp"
-                            android:layout_marginEnd="10dp"
-                            android:textSize="@dimen/indicatorsTextSize"
-                            android:gravity="left"
-                            android:layout_weight="2"/>
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/heightTweetActions"
-                            android:src="@drawable/ic_retweet_gray_logo"
-                            android:layout_weight="1"/>
-
-                        <TextView
-                            android:id="@+id/tvNumberRetweets_Tweet_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="579"
-                            android:textColor="@color/colorAccent"
-                            android:layout_marginStart="1dp"
-                            android:layout_marginEnd="10dp"
-                            android:textSize="@dimen/indicatorsTextSize"
-                            android:gravity="left"
-                            android:layout_weight="2"/>
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/heightTweetActions"
-                            android:src="@drawable/ic_like_gray_logo"
-                            android:layout_weight="1"/>
-
-                        <TextView
-                            android:id="@+id/tvNumberLikes_Tweet_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="2,513"
-                            android:textColor="@color/colorAccent"
-                            android:layout_marginStart="1dp"
-                            android:layout_marginEnd="10dp"
-                            android:textSize="@dimen/indicatorsTextSize"
-                            android:gravity="left"
-                            android:layout_weight="2"/>
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/heightTweetActions"
-                            android:src="@drawable/ic_share_gray_logo"
-                            android:layout_weight="1"/>
-
-                        <TextView
-                            android:id="@+id/tvNumberShares_Tweet_5"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text=""
