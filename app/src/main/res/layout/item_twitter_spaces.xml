@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/marginAllSides"
+    android:background="@color/colorPrimary">
+
+    <!-- CardView containing all Spaces information -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/marginAllSides"
+        android:padding="@dimen/marginAllSides">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/randomBrilliantColor"
+                android:padding="@dimen/marginAllSides">
+
+                <!-- Sound wave icon + LIVE text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginAllSides">
+                    <ImageView
+                        android:id="@+id/ivSoundSpacesGif"
+                        android:layout_width="@dimen/profilePictureWidthSize"
+                        android:layout_height="@dimen/profilePictureWidthSize"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/darth_vader"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="4"
+                        android:text="LIVE"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Spaces title -->
+                <TextView
+                    android:id="@+id/tvSpaces_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Here goes the Space's title!!"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+
+                <!-- Spaces topic(s) -->
+                <TextView
+                    android:id="@+id/tvSpaces_Topics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Here goes the Space's topic!!"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="14sp"/>
+
+                <!-- People listening -->
+                <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="10">
+                    <ImageView
+                        android:id="@+id/ivProfilePic1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/darth_vader"/>
+
+                    <ImageView
+                        android:id="@+id/ivProfilePic2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/darth_vader"/>
+
+                    <ImageView
+                        android:id="@+id/ivProfilePic3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/darth_vader"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Here goes the number of people"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/marginAllSides"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="&#32;"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spaceListeningText"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/marginAllSides"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/randomDarkColor"
+                android:padding="@dimen/marginAllSides">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <ImageView
+                        android:id="@+id/ivSoundSpacesGif_Host"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:src="@drawable/darth_vader"/>
+
+                    <TextView
+                        android:id="@+id/tvSpaces_Bio_Username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Here goes the host's name"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/marginAllSides"
+                        android:backgroundTint="#B082FF"
+                        app:cardCornerRadius="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Host"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSpaces_Bio_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:textColor="@color/white"
+                    android:text="Here goes host's description"
+                    android:layout_marginTop="@dimen/marginAllSides"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

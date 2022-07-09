@@ -24,7 +24,7 @@ class TweetWithGifDetailDialogFragment : Fragment() {
     {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(view.context).
-        load("https://pbs.twimg.com/profile_images/1501699435343974400/SiBbZLJV_400x400.jpg").apply(RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_2)
+//        Glide.with(view.context).
+//        load("https://pbs.twimg.com/profile_images/1501699435343974400/SiBbZLJV_400x400.jpg").apply(RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_2)
     }
 }

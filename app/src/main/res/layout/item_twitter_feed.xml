@@ -3,26 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@drawable/shape_tweet"
+    android:layout_margin="@dimen/marginAllSides">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/cardCornerRadius"
         android:backgroundTint="@color/colorPrimary"
-        android:layout_margin="10dp">
+        android:layout_margin="@dimen/marginAllSides">
         <LinearLayout
             android:id="@+id/llFeedTweet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/marginAllSides">
             <ImageView
                 android:id="@+id/ivProfilePicture_base"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/profilePictureWidthSize"
+                android:layout_height="@dimen/profilePictureHeightSize"
                 android:src="@drawable/profile_picture"
                 android:layout_weight="1"
                 android:layout_gravity="start"/>
@@ -45,14 +46,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/publicUserName"
                         android:textColor="@color/white"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:gravity="top"/>
 
                     <ImageView
                         android:id="@+id/ivVerifiedAccountLogo"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/ic_verified_account_white_logo"
-                        android:layout_gravity="center"
+                        android:layout_gravity="top"
                         android:layout_marginStart="2dp"
                         android:layout_marginEnd="5dp"/>
 
@@ -61,21 +63,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/realUserName"
-                        android:textColor="@color/colorAccent"/>
+                        android:textColor="@color/colorAccent"
+                        android:gravity="top"/>
 
                     <TextView
                         android:id="@+id/tvTimeTweet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" · Here is tweet's date"
-                        android:textColor="@color/colorAccent"/>
+                        android:textColor="@color/colorAccent"
+                        android:gravity="top"/>
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvEmptyTweet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/emptyTweetText"
+                    android:text="@string/emptyTweetBase"
                     android:textColor="@color/white"
                     android:textSize="@dimen/contentTweetText"/>
 
@@ -83,8 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/heightTweetActions"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginTop="10dp">
                     <ImageView
                         android:id="@+id/ivReply"
                         android:layout_width="wrap_content"
@@ -147,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_share_gray_logo"
-                        android:layout_weight="4"/>
+                        android:layout_weight="1"/>
 
 <!--                    <TextView-->
 <!--                        android:id="@+id/tvNumberShares"-->

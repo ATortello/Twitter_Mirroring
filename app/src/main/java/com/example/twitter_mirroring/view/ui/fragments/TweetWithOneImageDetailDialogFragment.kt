@@ -25,7 +25,7 @@ class TweetWithOneImageDetailDialogFragment : Fragment() {
     {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(view.context).load("https://pbs.twimg.com/profile_images/1535378872065302528/cRRZT-pX_400x400.jpg").
-        apply(RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_3)
+//        Glide.with(view.context).load("https://pbs.twimg.com/profile_images/1535378872065302528/cRRZT-pX_400x400.jpg").
+//        apply(RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_3)
     }
 }

@@ -13,5 +13,7 @@
     <color name="colorPrimary">#15202B</color>
     <color name="colorAccent">#8B98A5</color>
     <color name="hashtagColor">#1D9BF0</color>
+    <color name="randomBrilliantColor">#9B63FA</color>
+    <color name="randomDarkColor">#8C5AE1</color>
 
 </resources>

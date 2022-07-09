@@ -25,7 +25,7 @@ class TweetWithFourImagesDetailDialogFragment : Fragment() {
     {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(view.context).load("https://pbs.twimg.com/profile_images/1541524005349367811/Tt23gJUo_400x400.jpg").apply(
-            RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_4)
+//        Glide.with(view.context).load("https://pbs.twimg.com/profile_images/1541524005349367811/Tt23gJUo_400x400.jpg").apply(
+//            RequestOptions.circleCropTransform()).into(ivProfilePicture_Tweet_4)
     }
 }
