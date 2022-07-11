@@ -102,27 +102,21 @@
                         android:src="@drawable/darth_vader"/>
 
                     <TextView
+                        android:id="@+id/tvSpaces_ListenersNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Here goes the number of people"
                         android:textColor="@color/white"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/marginAllSides"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="&#32;"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center_vertical"/>
+                        android:layout_marginStart="@dimen/marginAllSides"
+                        android:layout_marginEnd="@dimen/marginSmallAllSides"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/spaceListeningText"
                         android:textColor="@color/white"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginEnd="@dimen/marginAllSides"/>
+                        android:layout_gravity="center_vertical"/>
                 </LinearLayout>
             </LinearLayout>
 

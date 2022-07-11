@@ -44,4 +44,30 @@
 
     <!-- Texts for Spaces Fragment -->
     <string name="spaceListeningText">listening</string>
+
+    <!-- Tab's names for Notifications Fragment -->
+    <string name="notificationsFragmentTab_All">All</string>
+    <string name="notificationsFragmentTab_Mentions">Mentions</string>
+    <string name="notificationsFragmentTab_Notify_Me">Notify Me</string>
+    <string name="notificationsFragmentNotifications">New Tweet notifications for <b>BLU Antioquia</b> and 4 others</string>
+    <string name="notificationsFragmentLikes_PublicUserName">YUDDY18</string>
+    <string name="notificationsFragmentLikes_LikesText">liked 2 of your Tweets</string>
+    <string name="notificationsFragmentLikes_Summary">Una historia corta - Día 1\nideasincomodas.wordpress.com/2022/05/18/una&#8230; via @AgustinRTD</string>
+    <string name="notificationsFragmentLikes_ShowAll">Show all</string>
+    <string name="notificationsFragmentFollow_Text"><b>Victor Arias|</b> and <b>Don Cuervo</b> followed you</string>
+    <string name="notificationsFragmentComment_PublicUserName">Victor Arias|</string>
+    <string name="notificationsFragmentComment_RealUserName">&#64;viariasv&#32;&#183;</string>
+    <string name="notificationsFragmentComment_PublishedDate">19 May</string>
+    <string name="notificationsFragmentComment_ReplyingText">Replying to</string>
+    <string name="notificationsFragmentComment_MyPublicName">&#64;AgustinRTD</string>
+    <string name="notificationsFragmentComment_CommentText">Esta buena</string>
+    <string name="notificationsFragment_cantReplies">120</string>
+    <string name="notificationsFragment_cantRetweets">12</string>
+    <string name="notificationsFragment_cantLikes">963</string>
+
+    <!-- Tab's names for Direct Messages Fragment -->
+    <string name="directMessageFragment_MessageText">Good morning, I just updated my Opera browser to the latest version yesterday, but it came to my&#8230; attention</string>
+    <string name="directMessageFragment_PublicUserName">Opera</string>
+    <string name="directMessageFragment_RealUserName">&#64;opera&#32;&#183;</string>
+    <string name="directMessageFragment_PublishDate">11 Dec 21</string>
 </resources>

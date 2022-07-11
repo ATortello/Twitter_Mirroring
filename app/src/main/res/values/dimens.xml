@@ -23,8 +23,13 @@
     <!-- Image sizes -->
     <dimen name="profilePictureWidthSize">40dp</dimen>
     <dimen name="profilePictureHeightSize">40dp</dimen>
+    <dimen name="imageWidthSize">60dp</dimen>
 
     <!-- Basic margin -->
     <dimen name="marginAllSides">10dp</dimen>
+    <dimen name="marginSmallAllSides">5dp</dimen>
+
+    <!-- Direct Messages sizes -->
+    <dimen name="directMessagesHeight">80dp</dimen>
     
 </resources>
