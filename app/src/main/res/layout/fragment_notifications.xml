@@ -7,38 +7,38 @@
     android:orientation="vertical"
     android:background="@color/colorPrimary">
 
-    <LinearLayout
-        android:id="@+id/llNotificationsFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/marginAllSides">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/llNotificationsFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_margin="@dimen/marginAllSides">-->
 
-        <ImageView
-            android:id="@+id/ivNotificationsFragment_ProfilePic"
-            android:layout_width="@dimen/profilePictureWidthSize"
-            android:layout_height="@dimen/profilePictureHeightSize"
-            android:layout_gravity="start"
-            android:layout_weight="1"
-            android:src="@drawable/darth_vader"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/ivNotificationsFragment_ProfilePic"-->
+<!--            android:layout_width="@dimen/profilePictureWidthSize"-->
+<!--            android:layout_height="@dimen/profilePictureHeightSize"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/darth_vader"/>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notifications"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="4"
-            android:layout_marginStart="@dimen/marginAllSides"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Notifications"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_weight="4"-->
+<!--            android:layout_marginStart="@dimen/marginAllSides"/>-->
 
-        <ImageView
-            android:id="@+id/ivNotificationsFragment_Settings"
-            android:layout_width="@dimen/profilePictureWidthSize"
-            android:layout_height="@dimen/profilePictureHeightSize"
-            android:src="@drawable/ic_settings_logo"
-            android:layout_weight="1"
-            android:layout_gravity="start"/>
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:id="@+id/ivNotificationsFragment_Settings"-->
+<!--            android:layout_width="@dimen/profilePictureWidthSize"-->
+<!--            android:layout_height="@dimen/profilePictureHeightSize"-->
+<!--            android:src="@drawable/ic_settings_logo"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_gravity="start"/>-->
+<!--    </LinearLayout>-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tlNotificationsFragment_MainTabMenu"

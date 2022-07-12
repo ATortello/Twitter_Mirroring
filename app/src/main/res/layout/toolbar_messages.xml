@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/marginSmallAllSides"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/llDirectMessageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/marginAllSides">
+
+        <ImageView
+            android:id="@+id/ivSearchFragment_ProfilePic"
+            android:layout_width="@dimen/profilePictureWidthSize"
+            android:layout_height="@dimen/profilePictureWidthSize"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:src="@drawable/darth_vader"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profilePictureHeightSize"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/shape_searches">
+            <ImageView
+                android:id="@+id/ivSearchFragment_SearchIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_02_search_unselected"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/etSearchFragment_SearchBox"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Search Direct Messages"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivSearchFragment_Settings"
+            android:layout_width="@dimen/profilePictureWidthSize"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_settings_logo"
+            android:layout_weight="1"
+            android:layout_gravity="start"/>
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

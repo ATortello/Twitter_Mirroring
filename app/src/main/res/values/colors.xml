@@ -15,5 +15,6 @@
     <color name="hashtagColor">#1D9BF0</color>
     <color name="randomBrilliantColor">#9B63FA</color>
     <color name="randomDarkColor">#8C5AE1</color>
+    <color name="searchBackground">#273340</color>
 
 </resources>
