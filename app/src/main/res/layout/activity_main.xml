@@ -32,14 +32,14 @@
                     android:id="@+id/ivTwitterBlueLogo"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_twitter_blue_logo"
+                    android:src="@drawable/ic_new_twitter_logo"
                     android:layout_weight="8"/>
 
                 <ImageView
                     android:id="@+id/ivTopTweets"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_top_tweets_white_logo"
+                    android:src="@drawable/ic_settings_logo"
                     android:layout_weight="0.01"/>
             </LinearLayout>
         </Toolbar>

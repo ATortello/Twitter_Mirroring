@@ -42,11 +42,11 @@
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/activity_splashscreen.xml" value="0.44548952543822146" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/detailed_fragment_tweet_only_text.xml" value="0.2242817423540315" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_detailed_tweet_only_text.xml" value="0.4548952543822146" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_home.xml" value="0.44548952543822146" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_messages.xml" value="0.4398480371464753" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_notifications.xml" value="0.4398480371464753" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_home.xml" value="0.32715477293790546" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_messages.xml" value="0.32715477293790546" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_notifications.xml" value="0.32715477293790546" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_search.xml" value="0.32715477293790546" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_spaces.xml" value="0.44548952543822146" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_spaces.xml" value="0.32715477293790546" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_tweet_only_text_detail_dialog.xml" value="0.3990740740740741" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_tweet_with_four_images_detail_dialog.xml" value="0.3790546802594995" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/fragment_tweet_with_gif_detail_dialog.xml" value="0.3957367933271548" />
@@ -60,7 +60,7 @@
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/item_twitter_direct_messages.xml" value="0.44548952543822146" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/item_twitter_feed.xml" value="0.4398480371464753" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/item_twitter_notifications_tab_all.xml" value="0.4398480371464753" />
-        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/item_twitter_spaces.xml" value="0.40500463392029656" />
+        <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/item_twitter_spaces.xml" value="0.32715477293790546" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/toolbar_home.xml" value="0.32715477293790546" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/toolbar_messages.xml" value="0.32715477293790546" />
         <entry key="..\:/Users/Agustin R Tortello D/AndroidStudioProjects/tXq2T3WOjuUHV0nVkJDX/Twitter_Mirroring/app/src/main/res/layout/toolbar_notifications.xml" value="0.32715477293790546" />
@@ -69,10 +69,17 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20399693593398016" />
+      </ProjectState>
+    </option>
   </component>
 </project>
