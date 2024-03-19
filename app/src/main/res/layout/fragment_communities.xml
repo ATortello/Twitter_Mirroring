@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".view.ui.fragments.SpacesFragment"
     android:background="@color/colorPrimaryLight">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,45 +16,58 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_margin="@dimen/marginAllSides">
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
             <ImageView
                 android:id="@+id/ivProfilePicture"
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
                 android:src="@drawable/profile_picture"
-                android:layout_weight="0.01"/>
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CommunitiesTitle"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:layout_marginStart="@dimen/marginAllSides"/>
 
             <ImageView
-                android:id="@+id/ivTwitterBlueLogo"
-                android:layout_width="@dimen/profilePictureWidthSize"
-                android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/ic_new_twitter_logo"
-                android:layout_weight="8"/>
+                android:id="@+id/ivCommunitiesFragment_SearchIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_02_search_unselected"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_vertical"/>
 
             <ImageView
-                android:id="@+id/ivTopTweets"
-                android:layout_width="@dimen/profilePictureWidthSize"
-                android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/ic_settings_logo"
-                android:layout_weight="0.01"/>
+                android:id="@+id/ivCommunitiesFragment_AddingNewIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add_new_community"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_vertical"/>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tvTemporal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the Home page!"
+        android:text="This is the communities page!"
         android:textSize="20sp"
         android:layout_gravity="center"/>
 
     <!--<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFragmentHome"
+        android:id="@+id/rvFragmentSpaces"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <RelativeLayout
-        android:id="@+id/rlFeedTimeline"
+        android:id="@+id/rlSpacesTimeline"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <View

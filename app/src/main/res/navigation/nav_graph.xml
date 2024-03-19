@@ -12,51 +12,36 @@
         android:name="com.example.twitter_mirroring.view.ui.fragments.HomeFragment"
         android:label="HomeFragment" >
         <action
-            android:id="@+id/action_navHomeFragment_to_tweetOnlyTextDetailDialogFragment"
-            app:destination="@id/tweetOnlyTextDetailDialogFragment" />
-        <action
-            android:id="@+id/action_navHomeFragment_to_tweetWithGifDetailDialogFragment"
-            app:destination="@id/tweetWithGifDetailDialogFragment" />
-        <action
-            android:id="@+id/action_navHomeFragment_to_tweetWithOneImageDetailDialogFragment"
-            app:destination="@id/tweetWithOneImageDetailDialogFragment" />
-        <action
-            android:id="@+id/action_navHomeFragment_to_tweetWithFourImagesDetailDialogFragment"
-            app:destination="@id/tweetWithFourImagesDetailDialogFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_searchFragment"
+            android:id="@+id/action_navHomeFragment_to_navSearchFragment"
             app:destination="@id/navSearchFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_navCommunitiesFragment"
+            app:destination="@id/navCommunitiesFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_navNotificationsFragment"
+            app:destination="@id/navNotificationsFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_navDirectMessagesFragment"
+            app:destination="@id/navDirectMessagesFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navSearchFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
-        <action
-            android:id="@+id/action_searchFragment_to_spacesFragment"
-            app:destination="@id/navSpacesFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/navSpacesFragment"
+        android:id="@+id/navCommunitiesFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.SpacesFragment"
         android:label="fragment_spaces"
-        tools:layout="@layout/fragment_spaces" >
-        <action
-            android:id="@+id/action_spacesFragment_to_notificationsFragment"
-            app:destination="@id/navNotificationsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_communities" />
 
     <fragment
         android:id="@+id/navNotificationsFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.NotificationsFragment"
         android:label="fragment_notifications"
-        tools:layout="@layout/fragment_notifications" >
-        <action
-            android:id="@+id/action_notificationsFragment_to_messagesFragment"
-            app:destination="@id/navDirectMessagesFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navDirectMessagesFragment"
@@ -65,7 +50,7 @@
         tools:layout="@layout/fragment_messages" />
 
     <!-- Fragments for specified types of tweets -->
-    <fragment
+<!--    <fragment
         android:id="@+id/tweetOnlyTextDetailDialogFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.TweetOnlyTextDetailDialogFragment"
         android:label="TweetOnlyTextDetailDialogFragment" />
@@ -83,5 +68,5 @@
     <fragment
         android:id="@+id/tweetWithOneImageDetailDialogFragment"
         android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithOneImageDetailDialogFragment"
-        android:label="TweetWithOneImageDetailDialogFragment" />
+        android:label="TweetWithOneImageDetailDialogFragment" />-->
 </navigation>

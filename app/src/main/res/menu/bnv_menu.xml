@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_02_search_unselected"/>
 
     <item
-        android:id="@+id/navSpacesFragment"
+        android:id="@+id/navCommunitiesFragment"
         android:title="@string/bnvSpaces"
-        android:icon="@drawable/ic_03_mic_unselected"/>
+        android:icon="@drawable/ic_03_communities_unselected"/>
 
     <item
         android:id="@+id/navNotificationsFragment"

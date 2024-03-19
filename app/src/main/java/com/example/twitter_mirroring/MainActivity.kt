@@ -13,13 +13,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Set a new toolbar
-        setActionBar(findViewById(R.id.toolbarMain))
+//        //Set a new AndroidX Toolbar
+//        setSupportActionBar(findViewById(R.id.toolbarMain))
 
         //Setting up the navigation for the app
         configNav()
     }
 
     //Method to indicate the bottom navigation menu and the navigation controller
-    fun configNav() { NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this, R.id.fragContent)) }
+    fun configNav() {
+        NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this, R.id.fragmentContainer))
+    }
 }

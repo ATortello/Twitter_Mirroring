@@ -21,8 +21,8 @@
     <dimen name="cardCornerRadius">10dp</dimen>
 
     <!-- Image sizes -->
-    <dimen name="profilePictureWidthSize">40dp</dimen>
-    <dimen name="profilePictureHeightSize">40dp</dimen>
+    <dimen name="profilePictureWidthSize">30dp</dimen>
+    <dimen name="profilePictureHeightSize">30dp</dimen>
     <dimen name="imageWidthSize">60dp</dimen>
 
     <!-- Basic margin -->

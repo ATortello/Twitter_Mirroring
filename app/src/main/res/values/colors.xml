@@ -11,6 +11,7 @@
     <color name="splashScreenColor">#1D9BF0</color>
     <color name="backgroundDark">#15202B</color>
     <color name="colorPrimary">#15202B</color>
+    <color name="colorPrimaryLight">#5589BD</color>
     <color name="colorAccent">#8B98A5</color>
     <color name="hashtagColor">#1D9BF0</color>
     <color name="randomBrilliantColor">#9B63FA</color>
