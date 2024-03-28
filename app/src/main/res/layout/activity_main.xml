@@ -8,27 +8,30 @@
     tools:context=".MainActivity">
 
     <fragment
-            android:id="@+id/fragmentContainer"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_above="@id/bnvMenu"
-            app:navGraph="@navigation/nav_graph"
-            app:defaultNavHost="true"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/bnvMenu"/>
+        android:id="@+id/fragmentContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/bnvMenu"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bnvMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnvMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bnv_menu"
         android:background="@color/backgroundDark"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
-        app:layout_constraintStart_toStartOf="parent"
+        app:itemBackground="@color/backgroundDark"
+        app:itemIconTint="@drawable/nav_color_selector"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
+        app:menu="@menu/bnv_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

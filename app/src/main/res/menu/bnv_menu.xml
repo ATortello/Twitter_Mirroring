@@ -3,25 +3,25 @@
     <item
         android:id="@+id/navHomeFragment"
         android:title="@string/bnvHome"
-        android:icon="@drawable/ic_01_home_unselected"/>
+        android:icon="@drawable/ic_01_home"/>
 
     <item
         android:id="@+id/navSearchFragment"
         android:title="@string/bnvSearch"
-        android:icon="@drawable/ic_02_search_unselected"/>
+        android:icon="@drawable/ic_02_search"/>
 
     <item
         android:id="@+id/navCommunitiesFragment"
         android:title="@string/bnvSpaces"
-        android:icon="@drawable/ic_03_communities_unselected"/>
+        android:icon="@drawable/ic_03_communities"/>
 
     <item
         android:id="@+id/navNotificationsFragment"
         android:title="@string/bnvNotifications"
-        android:icon="@drawable/ic_04_notifications_unselected"/>
+        android:icon="@drawable/ic_04_notifications"/>
 
     <item
         android:id="@+id/navDirectMessagesFragment"
         android:title="@string/bnvDirectMessages"
-        android:icon="@drawable/ic_05_messages_unselected"/>
+        android:icon="@drawable/ic_05_messages"/>
 </menu>
