@@ -48,25 +48,4 @@
         android:name="com.example.twitter_mirroring.view.ui.fragments.MessagesFragment"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
-
-    <!-- Fragments for specified types of tweets -->
-<!--    <fragment
-        android:id="@+id/tweetOnlyTextDetailDialogFragment"
-        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetOnlyTextDetailDialogFragment"
-        android:label="TweetOnlyTextDetailDialogFragment" />
-
-    <fragment
-        android:id="@+id/tweetWithFourImagesDetailDialogFragment"
-        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithFourImagesDetailDialogFragment"
-        android:label="TweetWithFourImagesDetailDialogFragment" />
-
-    <fragment
-        android:id="@+id/tweetWithGifDetailDialogFragment"
-        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithGifDetailDialogFragment"
-        android:label="TweetWithGifDetailDialogFragment" />
-
-    <fragment
-        android:id="@+id/tweetWithOneImageDetailDialogFragment"
-        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetWithOneImageDetailDialogFragment"
-        android:label="TweetWithOneImageDetailDialogFragment" />-->
 </navigation>

@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.twitter_mirroring.R
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.twitter_mirroring.databinding.FragmentHomeBinding
+import kotlinx.android.synthetic.main.fragment_home.ivProfilePicture
 
 class HomeFragment : Fragment(){
 
@@ -17,7 +19,7 @@ class HomeFragment : Fragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -27,6 +29,9 @@ class HomeFragment : Fragment(){
     {
         super.onViewCreated(view, savedInstanceState)
         binding.ivProfilePicture.setOnClickListener { Toast.makeText(activity, "Profile picture clicked!", Toast.LENGTH_SHORT).show() }
+
+        Glide.with(view.context).load("https://pbs.twimg.com/profile_images/3103894633/e0d179fc5739a20308331b432e4f3a51_400x400.jpeg").
+        apply(RequestOptions.circleCropTransform()).into(ivProfilePicture)
 
     }
 }

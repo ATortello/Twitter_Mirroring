@@ -4,29 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
+    android:baselineAligned="false"
     android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_margin="@dimen/marginAllSides">
+        android:layout_margin="@dimen/marginAllSides"
+        android:layout_weight="1">
         <ImageView
             android:id="@+id/ivProfilePicture_tab_all_comments"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/profile_picture_3"
-            android:layout_weight="1"/>
+            android:src="@drawable/profile_picture_3"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="9"
-        android:orientation="vertical"
         android:layout_marginTop="@dimen/marginAllSides"
+        android:layout_marginEnd="@dimen/marginAllSides"
         android:layout_marginBottom="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides">
+        android:layout_weight="9"
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,16 +35,16 @@
                 android:id="@+id/directMessageFragment_PublicUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
                 android:text="@string/directMessageFragment_PublicUserName"
-                android:textColor="@color/white"
-                android:layout_marginEnd="1dp"/>
+                android:textColor="@color/white"/>
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:src="@drawable/ic_verified_account_blue_logo"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="1dp"/>
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_verified_account_blue_logo"/>
 
             <TextView
                 android:id="@+id/directMessageFragment_RealUserName"
@@ -65,9 +65,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:layout_marginEnd="@dimen/marginSmallAllSides"
             android:text="@string/directMessageFragment_MessageText"
-            android:textColor="@color/colorAccent"
-            android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+            android:textColor="@color/colorAccent"/>
 
     </LinearLayout>
 </LinearLayout>
