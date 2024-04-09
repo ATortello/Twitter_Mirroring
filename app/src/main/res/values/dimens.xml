@@ -3,6 +3,7 @@
     <dimen name="widthLogoTwitter">180dp</dimen>
     <dimen name="heightLogoTwitter">160dp</dimen>
     <dimen name="heightTweetActions">20dp</dimen>
+    <dimen name="sidesMarginSize">20dp</dimen>
 
     <dimen name="viewHeightSize">1dp</dimen>
     <dimen name="translateTextSize">13sp</dimen>
@@ -11,9 +12,12 @@
 
     <dimen name="indicatorsTextSize">14sp</dimen>
 
-    <!-- Sizes for 4-image tweets -->
-    <dimen name="imageOrGifWidth">376dp</dimen>
-    <dimen name="imageOrGifHeight">200dp</dimen>
+    <!-- Sizes for Search bars -->
+    <dimen name="optionsWidthSize">30dp</dimen>
+    <dimen name="optionsHeightSize">30dp</dimen>
+    <dimen name="optionsSmallWidthSize">20dp</dimen>
+    <dimen name="optionsSmallHeightSize">20dp</dimen>
+    <dimen name="searchBarHeight">60dp</dimen>
     <dimen name="imageWidth">183dp</dimen>
     <dimen name="imageHeight">100dp</dimen>
 

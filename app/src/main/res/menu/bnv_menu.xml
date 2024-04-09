@@ -12,7 +12,7 @@
 
     <item
         android:id="@+id/navCommunitiesFragment"
-        android:title="@string/bnvSpaces"
+        android:title="@string/bnvCommunities"
         android:icon="@drawable/ic_03_communities"/>
 
     <item

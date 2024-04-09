@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/navCommunitiesFragment"
-        android:name="com.example.twitter_mirroring.view.ui.fragments.SpacesFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.CommunitiesFragment"
         android:label="fragment_spaces"
         tools:layout="@layout/fragment_communities" />
 

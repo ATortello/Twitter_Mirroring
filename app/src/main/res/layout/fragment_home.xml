@@ -1,69 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorPrimaryLight">
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="@dimen/marginSmallAllSides"
-        android:background="@color/colorPrimary">
-        <LinearLayout
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/marginSmallAllSides">
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_margin="@dimen/marginAllSides">
             <ImageView
-                android:id="@+id/ivProfilePicture"
+                android:id="@+id/ivProfilePictureHome"
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/profile_picture"
-                android:layout_weight="0.01"/>
+                android:layout_gravity="start"
+                android:src="@drawable/profile_picture"/>
 
             <ImageView
-                android:id="@+id/ivTwitterBlueLogo"
-                android:layout_width="@dimen/profilePictureWidthSize"
-                android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/ic_new_twitter_logo"
-                android:layout_weight="8"/>
+                android:id="@+id/ivTwitterWhiteLogo"
+                android:layout_width="@dimen/optionsWidthSize"
+                android:layout_height="@dimen/optionsWidthSize"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_new_twitter_logo"/>
 
             <ImageView
-                android:id="@+id/ivTopTweets"
-                android:layout_width="@dimen/profilePictureWidthSize"
-                android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/ic_settings_logo"
-                android:layout_weight="0.01"/>
-        </LinearLayout>
+                android:id="@+id/ivTimelineSettings"
+                android:layout_width="@dimen/optionsWidthSize"
+                android:layout_height="@dimen/optionsWidthSize"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_settings_logo"/>
+        </FrameLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/tvTemporal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is the Home page!"
-        android:textSize="20sp"
-        android:layout_gravity="center"/>
-
-    <!--<androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFragmentHome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="This is the Home page!"
+        android:textSize="20sp"/>
 
-    <RelativeLayout
-        android:id="@+id/rlFeedTimeline"
+<!--    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <View
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFragmentHome"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="1"/>
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
-    </RelativeLayout>-->
-</FrameLayout>
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rlFeedTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="1"/>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</LinearLayout>

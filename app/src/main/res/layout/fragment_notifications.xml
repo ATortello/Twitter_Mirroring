@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryLight">
+    tools:context=".view.ui.fragments.NotificationsFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarNotifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="@dimen/marginSmallAllSides"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/marginSmallAllSides">
         <LinearLayout
-            android:id="@+id/llNotificationsFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/marginAllSides">
-
+            android:layout_margin="@dimen/marginAllSides"
+            android:orientation="horizontal">
             <ImageView
-                android:id="@+id/ivNotificationsFragment_ProfilePic"
+                android:id="@+id/ivProfilePictureNotifications"
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:src="@drawable/darth_vader"/>
+                android:src="@drawable/profile_picture"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Notifications"
-                android:textStyle="bold"
                 android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/marginAllSides"
                 android:layout_weight="4"
-                android:layout_marginStart="@dimen/marginAllSides"/>
+                android:text="@string/bnvNotifications"
+                android:textStyle="bold"/>
 
             <ImageView
-                android:id="@+id/ivNotificationsFragment_Settings"
-                android:layout_width="@dimen/profilePictureWidthSize"
-                android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/ic_settings_logo"
-                android:layout_weight="1"
-                android:layout_gravity="start"/>
+                android:id="@+id/ivNotifications"
+                android:layout_width="@dimen/optionsWidthSize"
+                android:layout_height="@dimen/optionsHeightSize"
+                android:src="@drawable/ic_settings_logo"/>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tlNotificationsFragment_MainTabMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarNotifications">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
@@ -72,5 +66,5 @@
         android:id="@+id/vpNotificationsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tlNotificationsFragment_MainTabMenu"/>
-</RelativeLayout>
+        android:background="@color/colorAccent"/>
+</LinearLayout>

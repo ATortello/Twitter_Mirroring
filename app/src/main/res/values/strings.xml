@@ -4,7 +4,7 @@
     <!-- Menu names for BottomNavigationView component in Main Activity screen -->
     <string name="bnvHome">Home</string>
     <string name="bnvSearch">Search</string>
-    <string name="bnvSpaces">Communities</string>
+    <string name="bnvCommunities">Communities</string>
     <string name="bnvNotifications">Notifications</string>
     <string name="bnvDirectMessages">Messages</string>
 
@@ -42,7 +42,7 @@
 
     <!-- Texts for Communities Fragment -->
     <string name="spaceListeningText">listening</string>
-    <string name="CommunitiesTitle">Communities</string>
+<!--    <string name="CommunitiesTitle">Communities</string>-->
 
     <!-- Tab's names for Notifications Fragment -->
     <string name="notificationsFragmentTab_All">All</string>

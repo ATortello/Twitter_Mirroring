@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.twitter_mirroring.databinding.FragmentNotificationsBinding
+import com.example.twitter_mirroring.databinding.FragmentCommunitiesBinding
 
-class NotificationsFragment : Fragment() {
+class CommunitiesFragment : Fragment() {
 
     //Implementing ViewBinding
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentCommunitiesBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
@@ -21,7 +21,7 @@ class NotificationsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
         // Inflate the layout for this fragment
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentCommunitiesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,8 +33,9 @@ class NotificationsFragment : Fragment() {
         Glide.with(view.context)
             .load("https://pbs.twimg.com/profile_images/3103894633/e0d179fc5739a20308331b432e4f3a51_400x400.jpeg")
             .apply(RequestOptions.circleCropTransform())
-            .into(binding.ivProfilePictureNotifications)
+            .into(binding.ivProfilePictureCommunities)
 
-        binding.ivProfilePictureNotifications.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Notifications screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureCommunities.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Communities screen!", Toast.LENGTH_SHORT).show() }
     }
+
 }
