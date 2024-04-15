@@ -22,21 +22,24 @@
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
                 android:layout_gravity="start"
-                android:src="@drawable/profile_picture"/>
+                android:contentDescription="@string/profilePicture"
+                android:src="@drawable/profile_picture" />
 
             <ImageView
                 android:id="@+id/ivTwitterWhiteLogo"
                 android:layout_width="@dimen/optionsWidthSize"
                 android:layout_height="@dimen/optionsWidthSize"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_new_twitter_logo"/>
+                android:contentDescription="@string/TODO"
+                android:src="@drawable/ic_new_twitter_logo" />
 
             <ImageView
                 android:id="@+id/ivTimelineSettings"
                 android:layout_width="@dimen/optionsWidthSize"
                 android:layout_height="@dimen/optionsWidthSize"
                 android:layout_gravity="end"
-                android:src="@drawable/ic_settings_logo"/>
+                android:contentDescription="@string/TODO"
+                android:src="@drawable/ic_settings_logo" />
         </FrameLayout>
     </androidx.appcompat.widget.Toolbar>
 

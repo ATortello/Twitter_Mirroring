@@ -15,6 +15,7 @@
             android:id="@+id/ivProfilePicture_Detail"
             android:layout_width="@dimen/profilePictureWidthSize"
             android:layout_height="40dp"
+            android:contentDescription="@string/profilePicture"
             android:src="@drawable/profile_picture"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,7 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="@dimen/marginExtraSmallAllSides"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_verified_account_white_logo"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/tvPublicName_Detail"
@@ -95,6 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/padme_1"/>
 
@@ -104,6 +107,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/padme_4"
                     android:visibility="visible"/>
@@ -122,6 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/padme_2"
                     android:visibility="visible"/>
@@ -132,6 +137,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/padme_3"
                     android:visibility="visible"/>
@@ -261,6 +267,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/heightTweetActions"
             android:layout_weight="1"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_reply_gray_logo"/>
 
         <ImageView
@@ -268,6 +275,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/heightTweetActions"
             android:layout_weight="1"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_retweet_gray_logo"/>
 
         <ImageView
@@ -275,6 +283,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/heightTweetActions"
             android:layout_weight="1"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_like_gray_logo"/>
 
         <ImageView
@@ -282,6 +291,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/heightTweetActions"
             android:layout_weight="1"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_bookmark_gray_logo"/>
 
         <ImageView
@@ -289,6 +299,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/heightTweetActions"
             android:layout_weight="1"
+            android:contentDescription="@string/TODO"
             android:src="@drawable/ic_share_gray_logo"/>
     </LinearLayout>
 

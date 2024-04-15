@@ -22,7 +22,8 @@
                 android:id="@+id/ivProfilePictureNotifications"
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/profile_picture"/>
+                android:contentDescription="@string/profilePicture"
+                android:src="@drawable/profile_picture" />
 
             <TextView
                 android:layout_width="0dp"
@@ -37,7 +38,8 @@
                 android:id="@+id/ivNotifications"
                 android:layout_width="@dimen/optionsWidthSize"
                 android:layout_height="@dimen/optionsHeightSize"
-                android:src="@drawable/ic_settings_logo"/>
+                android:contentDescription="@string/TODO"
+                android:src="@drawable/ic_settings_logo" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 

@@ -18,7 +18,8 @@
             android:layout_width="@dimen/profilePictureWidthSize"
             android:layout_height="@dimen/profilePictureHeightSize"
             android:layout_marginHorizontal="@dimen/marginAllSides"
-            android:src="@drawable/profile_picture"/>
+            android:contentDescription="@string/profilePicture"
+            android:src="@drawable/profile_picture" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,6 +44,7 @@
                     android:layout_gravity="top"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_verified_account_white_logo"/>
 
                 <TextView
@@ -100,6 +102,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_1"/>
 
@@ -109,6 +112,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/marginSmallAllSides"
                             android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_4"
                             android:visibility="visible"/>
@@ -127,6 +131,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_2"
                             android:visibility="visible"/>
@@ -137,6 +142,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/marginSmallAllSides"
                             android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_3"
                             android:visibility="visible"/>
@@ -154,6 +160,7 @@
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_reply_gray_logo"/>
 
                 <TextView
@@ -166,6 +173,7 @@
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_retweet_gray_logo"/>
 
                 <TextView
@@ -178,6 +186,7 @@
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_like_gray_logo"/>
 
                 <TextView
@@ -190,6 +199,7 @@
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_view_gray_logo"/>
 
                 <TextView
@@ -203,6 +213,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/marginAllSides"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_bookmark_gray_logo"/>
 
                 <ImageView
@@ -210,6 +221,7 @@
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_share_gray_logo"/>
             </LinearLayout>
         </LinearLayout>

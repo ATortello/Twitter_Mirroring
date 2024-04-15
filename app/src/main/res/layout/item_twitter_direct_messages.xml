@@ -14,6 +14,7 @@
         android:layout_height="@dimen/directMessagesHeight"
         android:layout_gravity="top"
         android:layout_weight="1"
+        android:contentDescription="@string/profilePicture"
         android:src="@drawable/profile_picture_3"/>
 
     <LinearLayout
@@ -41,6 +42,7 @@
                 android:layout_gravity="top"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="5dp"
+                android:contentDescription="@string/TODO"
                 android:src="@drawable/ic_verified_account_blue_logo"
                 android:visibility="visible"/>
 

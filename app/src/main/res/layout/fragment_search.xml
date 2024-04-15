@@ -23,7 +23,8 @@
                 android:id="@+id/ivProfilePictureSearch"
                 android:layout_width="@dimen/profilePictureWidthSize"
                 android:layout_height="@dimen/profilePictureHeightSize"
-                android:src="@drawable/profile_picture"/>
+                android:contentDescription="@string/profilePicture"
+                android:src="@drawable/profile_picture" />
 
             <EditText
                 android:id="@+id/etSearchFragment_SearchBox"
@@ -36,13 +37,14 @@
                 android:background="@drawable/shape_searches"
                 android:hint="@string/searchFragmentBarHint"
                 android:inputType="text"
-                android:paddingStart="8dp"/>
+                android:paddingHorizontal="8dp"/>
 
             <ImageView
                 android:id="@+id/ivExploreSettings"
                 android:layout_width="@dimen/optionsWidthSize"
                 android:layout_height="@dimen/optionsHeightSize"
-                android:src="@drawable/ic_settings_logo"/>
+                android:contentDescription="@string/TODO"
+                android:src="@drawable/ic_settings_logo" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 

@@ -75,4 +75,9 @@
     <string name="directMessageFragment_RealUserName">"&#64;opera&#32;&#183;</string>
     <string name="directMessageFragment_PublishDate">11 Dec 21</string>
     <string name="directMessageFragment_Title">Search Direct Messages</string>
+
+    <!-- Content Description texts -->
+    <string name="splashScreen">AppImageLogo</string>
+    <string name="profilePicture">ProfilePicture</string>
+    <string name="TODO">ToDo</string>
 </resources>

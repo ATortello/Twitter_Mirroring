@@ -5,16 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.SplashscreenActivity"
-    android:background="@color/splashScreenColor">
+    android:background="@color/splashScreenColor"
+    tools:context=".ui.activities.SplashscreenActivity">
 
     <ImageView
         android:id="@+id/ivTwitterLogo"
         android:layout_width="@dimen/widthLogoTwitter"
         android:layout_height="@dimen/heightLogoTwitter"
+        android:contentDescription="@string/splashScreen"
         android:src="@drawable/ic_twitter_white_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/marginAllSides"
-        android:padding="@dimen/marginAllSides">
+        android:padding="@dimen/marginAllSides"
+        app:cardCornerRadius="@dimen/marginAllSides">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,8 +20,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@color/randomBrilliantColor"
+                android:orientation="vertical"
                 android:padding="@dimen/marginAllSides">
 
                 <!-- Sound wave icon + LIVE text -->
@@ -35,16 +35,17 @@
                         android:layout_height="@dimen/profilePictureWidthSize"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
+                        android:contentDescription="@string/TODO"
                         android:src="@drawable/darth_vader"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="4"
                         android:text="LIVE"
                         android:textColor="@color/white"
-                        android:layout_marginStart="10dp"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -53,36 +54,37 @@
                     android:id="@+id/tvSpaces_Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="Here goes the Space's title!!"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
 
                 <!-- Spaces topic(s) -->
                 <TextView
                     android:id="@+id/tvSpaces_Topics"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="Here goes the Space's topic!!"
-                    android:textColor="@color/white"
+                    android:layout_gravity="start"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
+                    android:text="Here goes the Space's topic!!"
+                    android:textColor="@color/white"
                     android:textSize="14sp"/>
 
                 <!-- People listening -->
                 <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight="10">
+                android:layout_weight="10"
+                android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/ivProfilePic1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
+                        android:contentDescription="@string/TODO"
                         android:src="@drawable/darth_vader"/>
 
                     <ImageView
@@ -91,7 +93,8 @@
                         android:layout_height="25dp"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:src="@drawable/darth_vader"/>
+                        android:src="@drawable/darth_vader"
+                        android:contentDescription="@string/TODO"/>
 
                     <ImageView
                         android:id="@+id/ivProfilePic3"
@@ -99,44 +102,46 @@
                         android:layout_height="25dp"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
+                        android:contentDescription="@string/TODO"
                         android:src="@drawable/darth_vader"/>
 
                     <TextView
                         android:id="@+id/tvSpaces_ListenersNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Here goes the number of people"
-                        android:textColor="@color/white"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/marginAllSides"
-                        android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                        android:layout_marginEnd="@dimen/marginSmallAllSides"
+                        android:text="Here goes the number of people"
+                        android:textColor="@color/white"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:text="@string/spaceListeningText"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center_vertical"/>
+                        android:textColor="@color/white"/>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:background="@color/randomDarkColor"
+                android:orientation="vertical"
                 android:padding="@dimen/marginAllSides">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center_vertical">
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/ivSoundSpacesGif_Host"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="start"
+                        android:contentDescription="@string/TODO"
                         android:src="@drawable/darth_vader"/>
 
                     <TextView
@@ -144,9 +149,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
                         android:text="Here goes the host's name"
                         android:textColor="@color/white"
-                        android:layout_marginStart="5dp"
                         android:textStyle="bold"/>
 
                     <androidx.cardview.widget.CardView
@@ -160,10 +165,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:text="Host"
-                            android:textColor="@color/white"
                             android:layout_marginStart="5dp"
-                            android:layout_marginEnd="5dp"/>
+                            android:layout_marginEnd="5dp"
+                            android:text="Host"
+                            android:textColor="@color/white"/>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
@@ -172,9 +177,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="fill"
-                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/marginAllSides"
                     android:text="Here goes host's description"
-                    android:layout_marginTop="@dimen/marginAllSides"/>
+                    android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
