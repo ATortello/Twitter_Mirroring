@@ -8,23 +8,28 @@
     <string name="bnvNotifications">Notifications</string>
     <string name="bnvDirectMessages">Messages</string>
 
-    <!-- Common info: User public name and Real Username texts -->
+    <!-- Basic info: User public name and Real Username texts and more -->
     <string name="publicUserName">Brais Moure</string>
     <string name="realUserName">"&#x40;MoureDev"</string>
-
-    <!-- Common info: Time / Device texts -->
-    <string name="hour">7:49 AM</string>
+    <string name="tweetContent">“you are strong and wise, and i am very proud of you.”</string>
+    <string name="hour">&#x20;·&#x20;7:49 AM</string>
     <string name="separatorDot">·</string>
     <string name="date">Jun 16, 2022</string>
-    <string name="device">Twitter for Android</string>
+    <string name="device"> Twitter for Android</string>
+    <string name="timePosted">7:49&#x20;AM&#x20;·&#x20;</string>
+    <string name="datePosted">Jun 16,&#x20;2022&#x20;·&#x20;</string>
 
     <!-- Common info: Indicators texts -->
     <string name="cantRetweets">120</string>
-    <string name="labelCantRetweets">Retweets</string>
+    <string name="labelCantReposts">Reposts</string>
+    <string name="labelCantQuoteTweets">Quotes</string>
     <string name="cantQuoteTweets">12</string>
-    <string name="labelcantQuoteTweets">Quote Tweet</string>
+    <string name="labelCantTweetLikes">Likes</string>
     <string name="cantTweetLikes">963</string>
-    <string name="labelcantTweetLikes">Likes</string>
+    <string name="labelCantTweetBookmarks">Bookmarks</string>
+    <string name="cantTweetBookmarks">6</string>
+    <string name="labelCantTweetViews">&#x20;Views</string>
+    <string name="cantTweetViews">395</string>
 
     <!-- Labels for Content Tweet only Text-->
     <string name="contentTweetText">"Qué pena ver tantos palos entre devs.\n\nLo tengo claro:\n\nCualquier persona que esté dispuesta a compartir lo aprendido para ayudar al resto (independientemente de su grado de conocimiento), vale infinito más que la opinión de &#x22;Paco_75&#x22; esforzándose en decirte que sabe más que tú."</string>
@@ -70,9 +75,4 @@
     <string name="directMessageFragment_RealUserName">"&#64;opera&#32;&#183;</string>
     <string name="directMessageFragment_PublishDate">11 Dec 21</string>
     <string name="directMessageFragment_Title">Search Direct Messages</string>
-
-    <!-- Empty Texts -->
-    <string name="emptyTweetBase"></string>
-
-
 </resources>

@@ -5,26 +5,21 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:baselineAligned="false"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="@dimen/marginAllSides">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides"
-        android:layout_weight="1">
-        <ImageView
-            android:id="@+id/ivProfilePicture_tab_all_comments"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/profile_picture_3"/>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivProfilePicture_Messages"
+        android:layout_width="@dimen/directMessagesWidth"
+        android:layout_height="@dimen/directMessagesHeight"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:src="@drawable/profile_picture_3"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides"
-        android:layout_marginBottom="@dimen/marginAllSides"
+        android:layout_height="@dimen/directMessagesHeight"
+        android:layout_marginStart="@dimen/marginAllSides"
         android:layout_weight="9"
         android:orientation="vertical">
         <LinearLayout
@@ -32,30 +27,33 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/directMessageFragment_PublicUserName"
+                android:id="@+id/tvPublicName_Messages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="1dp"
                 android:text="@string/directMessageFragment_PublicUserName"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
             <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="1dp"
-                android:src="@drawable/ic_verified_account_blue_logo"/>
+                android:id="@+id/ivVerifiedLogo_Messages"
+                android:layout_width="@dimen/generalSizeLogo"
+                android:layout_height="@dimen/generalSizeLogo"
+                android:layout_gravity="top"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_verified_account_blue_logo"
+                android:visibility="visible"/>
 
             <TextView
-                android:id="@+id/directMessageFragment_RealUserName"
+                android:id="@+id/tvRealUsername_Messages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/marginSmallAllSides"
+                android:layout_marginEnd="1dp"
                 android:text="@string/directMessageFragment_RealUserName"
                 android:textColor="@color/colorAccent" />
 
             <TextView
-                android:id="@+id/directMessageFragment_PublishDate"
+                android:id="@+id/tvTimePosted_Messages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/directMessageFragment_PublishDate"
@@ -63,11 +61,10 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tvMessageContent"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginEnd="@dimen/marginSmallAllSides"
+            android:layout_height="wrap_content"
             android:text="@string/directMessageFragment_MessageText"
             android:textColor="@color/colorAccent"/>
-
     </LinearLayout>
 </LinearLayout>

@@ -35,6 +35,6 @@ class SearchFragment : Fragment()  {
             .apply(RequestOptions.circleCropTransform())
             .into(binding.ivProfilePictureSearch)
 
-        binding.ivProfilePictureSearch.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Search screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureSearch.setOnClickListener { Toast.makeText(activity, "Profile picture in Search screen!", Toast.LENGTH_SHORT).show() }
     }
 }

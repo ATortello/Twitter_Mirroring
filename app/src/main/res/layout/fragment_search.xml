@@ -26,7 +26,7 @@
                 android:src="@drawable/profile_picture"/>
 
             <EditText
-                android:id="@+id/etSearchBox"
+                android:id="@+id/etSearchFragment_SearchBox"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"

@@ -35,7 +35,7 @@ class CommunitiesFragment : Fragment() {
             .apply(RequestOptions.circleCropTransform())
             .into(binding.ivProfilePictureCommunities)
 
-        binding.ivProfilePictureCommunities.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Communities screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureCommunities.setOnClickListener { Toast.makeText(activity, "Profile picture in Communities screen!", Toast.LENGTH_SHORT).show() }
     }
 
 }

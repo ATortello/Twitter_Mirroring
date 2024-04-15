@@ -2,262 +2,217 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llGeneralTweet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-<!--        android:id="@+id/llUserInfo"-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides">
-
-        <ImageView
-            android:id="@+id/ivProfilePicture"
-            android:layout_width="@dimen/profilePictureWidthSize"
-            android:layout_height="40dp"
-            android:src="@drawable/padme_amidala"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/tvPublicName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginAllSides"
-            android:text=""
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <ImageView
-            android:id="@+id/ivVerifiedLogo"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="@dimen/marginExtraSmallAllSides"
-            android:src="@drawable/ic_verified_account_white_logo"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/tvPublicName"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/tvRealUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginAllSides"
-            android:text=""
-            android:textColor="@color/white"
-            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture"
-            app:layout_constraintTop_toBottomOf="@+id/tvPublicName"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/tvTweetContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="@dimen/contentTweetText"/>
-
-    <TextView
-        android:id="@+id/tvTranslateOption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides"
-        android:text="@string/optionTranslateTweetText"
-        android:textColor="@color/splashScreenColor"
-        android:textSize="@dimen/translateTextSize"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMedia2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/cardViewHeight"
-        android:layout_margin="@dimen/marginAllSides"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/cardCornerRadius">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <ImageView
-                    android:id="@+id/ivTopLeftImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_1"/>
-
-                <ImageView
-                    android:id="@+id/ivBottomLeftImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_4"
-                    android:visibility="visible"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-                <ImageView
-                    android:id="@+id/ivTopRightImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_2"
-                    android:visibility="visible"/>
-
-                <ImageView
-                    android:id="@+id/ivBottomRightImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_3"
-                    android:visibility="visible"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
     <LinearLayout
-        android:id="@+id/llDateAndDeviceInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvHourAndDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/dateAndDeviceTextSize"/>
-
-        <TextView
-            android:id="@+id/tvDevice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/device"
-            android:textColor="@color/splashScreenColor"
-            android:textSize="@dimen/dateAndDeviceTextSize"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewHeightSize"
-        android:layout_marginStart="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides"
-        android:background="@color/colorAccent"/>
-
-    <LinearLayout
-        android:id="@+id/llMetrics"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tvCantRetweets"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-
-        <TextView
-            style="@style/MetricsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCantRetweets"/>
-
-        <TextView
-            android:id="@+id/tvCantQuoteTweets"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-
-        <TextView
-            style="@style/MetricsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelcantQuoteTweets"/>
-
-        <TextView
-            android:id="@+id/tvTweetWithFourImages_Metrics_CantLikes"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-
-        <TextView
-            style="@style/MetricsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelcantTweetLikes"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewHeightSize"
-        android:layout_marginStart="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides"
-        android:background="@color/colorAccent"/>
-
-    <LinearLayout
-        android:id="@+id/llTweetActions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/marginAllSides"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/marginAllSides">
         <ImageView
-            android:id="@+id/ivReply"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:src="@drawable/ic_reply_gray_logo"/>
+            android:id="@+id/ivProfilePicture_Feed"
+            android:layout_width="@dimen/profilePictureWidthSize"
+            android:layout_height="@dimen/profilePictureHeightSize"
+            android:layout_marginHorizontal="@dimen/marginAllSides"
+            android:src="@drawable/profile_picture"/>
 
-        <ImageView
-            android:id="@+id/ivRetweet"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:src="@drawable/ic_retweet_gray_logo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvPublicName_Feed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publicUserName"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
 
-        <ImageView
-            android:id="@+id/ivLike"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:src="@drawable/ic_like_gray_logo"/>
+                <ImageView
+                    android:id="@+id/ivVerifiedLogo_Feed"
+                    android:layout_width="@dimen/generalSizeLogo"
+                    android:layout_height="@dimen/generalSizeLogo"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_verified_account_white_logo"/>
 
-        <ImageView
-            android:id="@+id/ivShare"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:src="@drawable/ic_share_gray_logo"/>
+                <TextView
+                    android:id="@+id/tvRealUsername_Feed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="@string/realUserName"
+                    android:textColor="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/tvTimePosted_Feed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="@string/hour"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTweetContent_Feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tweetContent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/contentTweetFeedTextSize"/>
+
+            <TextView
+                android:id="@+id/tvTranslateOption_Feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/optionTranslateTweetText"
+                android:textColor="@color/splashScreenColor"
+                android:textSize="@dimen/translateTextSize"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardViewHeight"
+                android:layout_marginTop="@dimen/marginAllSides"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/cardCornerRadius">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/ivTopLeftImage_Feed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_1"/>
+
+                        <ImageView
+                            android:id="@+id/ivBottomLeftImage_Feed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_4"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/marginSmallAllSides"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ivTopRightImage_Feed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_2"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/ivBottomRightImage_Feed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_3"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightTweetActions"
+                android:layout_marginTop="@dimen/marginAllSides"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivReply_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reply_gray_logo"/>
+
+                <TextView
+                    android:id="@+id/tvCantReplies_Feed"
+                    style="@style/MetricsGrayText"
+                    android:text="@string/cantRetweets"/>
+
+                <ImageView
+                    android:id="@+id/ivRetweet_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_retweet_gray_logo"/>
+
+                <TextView
+                    android:id="@+id/tvCantRetweets_Feed"
+                    style="@style/MetricsGrayText"
+                    android:text="@string/cantRetweets"/>
+
+                <ImageView
+                    android:id="@+id/ivLikeTweet_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_like_gray_logo"/>
+
+                <TextView
+                    android:id="@+id/tvCantLikes_Feed"
+                    style="@style/MetricsGrayText"
+                    android:text="@string/cantTweetLikes"/>
+
+                <ImageView
+                    android:id="@+id/ivViews_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_view_gray_logo"/>
+
+                <TextView
+                    android:id="@+id/tvCantViews_Feed"
+                    style="@style/MetricsGrayText"
+                    android:text="@string/cantTweetViews"/>
+
+                <ImageView
+                    android:id="@+id/ivBookmark_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/marginAllSides"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_bookmark_gray_logo"/>
+
+                <ImageView
+                    android:id="@+id/ivShare_Feed"
+                    android:layout_width="@dimen/tweetActionsWidth"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_share_gray_logo"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <View

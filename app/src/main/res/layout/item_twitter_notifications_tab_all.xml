@@ -3,60 +3,51 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/llNotificationsFragment_tab_all_notifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="@dimen/marginAllSides"
-        android:baselineAligned="false">
-        <LinearLayout
-            android:layout_width="@dimen/imageWidthSize"
-            android:layout_height="match_parent">
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"/>
-
-            <ImageView
-                android:id="@+id/ivProfilePicture_tab_all_notifications"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_notification_blue_logo"
-                android:layout_weight="1"/>
-        </LinearLayout>
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivProfilePicture_tab_all_notifications"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_notification_blue_logo"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:layout_weight="6"
             android:layout_marginStart="@dimen/marginAllSides"
-            android:baselineAligned="false">
+            android:layout_weight="8"
+            android:baselineAligned="false"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/ivProfilePic1_tab_all_notifications"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="start"
-                    android:src="@drawable/darth_vader"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:src="@drawable/darth_vader"/>
 
                 <ImageView
                     android:id="@+id/ivProfilePic2_tab_all_notifications"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="start"
-                    android:src="@drawable/darth_vader"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:src="@drawable/darth_vader"/>
 
                 <ImageView
                     android:id="@+id/ivProfilePic3_tab_all_notifications"
@@ -83,11 +74,11 @@
         android:id="@+id/llNotificationsFragment_tab_all_likes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="@dimen/marginAllSides"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="@dimen/imageWidthSize"
+            android:layout_width="@dimen/imageSize"
             android:layout_height="match_parent">
             <View
                 android:layout_width="0dp"
@@ -98,30 +89,30 @@
                 android:id="@+id/ivProfilePicture_tab_all_likes"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_like_red_logo"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:src="@drawable/ic_like_red_logo"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:layout_weight="6"
             android:layout_marginStart="@dimen/marginAllSides"
-            android:baselineAligned="false">
+            android:layout_weight="6"
+            android:baselineAligned="false"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/ivProfilePic1_tab_all_likes"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="start"
-                    android:src="@drawable/darth_vader"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:src="@drawable/darth_vader"/>
             </LinearLayout>
 
             <LinearLayout
@@ -131,10 +122,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/notificationsFragmentLikes_PublicUserName"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -166,11 +157,11 @@
         android:id="@+id/llNotificationsFragment_tab_all_follow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="@dimen/marginAllSides"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="@dimen/imageWidthSize"
+            android:layout_width="@dimen/imageSize"
             android:layout_height="match_parent">
             <View
                 android:layout_width="0dp"
@@ -181,38 +172,38 @@
                 android:id="@+id/ivProfilePicture_tab_all_follow"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_person_blue_logo"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:src="@drawable/ic_person_blue_logo"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:layout_weight="6"
             android:layout_marginStart="@dimen/marginAllSides"
-            android:baselineAligned="false">
+            android:layout_weight="6"
+            android:baselineAligned="false"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/ivProfilePic1_tab_all_follow"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="start"
-                    android:src="@drawable/darth_vader"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:src="@drawable/darth_vader"/>
 
                 <ImageView
                     android:id="@+id/ivProfilePic2_tab_all_follow"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="start"
-                    android:src="@drawable/darth_vader"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:src="@drawable/darth_vader"/>
             </LinearLayout>
 
             <TextView
@@ -232,11 +223,11 @@
         android:id="@+id/llNotificationsFragment_tab_all_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="@dimen/marginAllSides"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="@dimen/imageWidthSize"
+            android:layout_width="@dimen/imageSize"
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/ivProfilePicture_tab_all_comments"
@@ -248,11 +239,11 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:layout_weight="6"
             android:layout_marginStart="@dimen/marginAllSides"
-            android:baselineAligned="false">
+            android:layout_weight="6"
+            android:baselineAligned="false"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -260,9 +251,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/notificationsFragmentComment_PublicUserName"
                     android:textColor="@color/white"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -286,16 +277,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/notificationsFragmentComment_ReplyingText"
-                    android:textColor="@color/colorAccent"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:textColor="@color/colorAccent"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/notificationsFragmentComment_MyPublicName"
-                    android:textColor="@color/hashtagColor"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"/>
+                    android:textColor="@color/hashtagColor"/>
             </LinearLayout>
 
             <TextView
@@ -307,71 +298,50 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/heightTweetActions"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/ivReply"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_reply_gray_logo"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reply_gray_logo"/>
 
                 <TextView
                     android:id="@+id/tvNumberReplies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/notificationsFragment_cantReplies"
-                    android:textColor="@color/colorAccent"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="@dimen/indicatorsTextSize"
-                    android:gravity="start"
-                    android:layout_weight="2"/>
+                    style="@style/MetricsGrayText"
+                    android:text="@string/notificationsFragment_cantReplies"/>
 
                 <ImageView
                     android:id="@+id/ivRetweet"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_retweet_gray_logo"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_retweet_gray_logo"/>
 
                 <TextView
                     android:id="@+id/tvNumberRetweets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/notificationsFragment_cantRetweets"
-                    android:textColor="@color/colorAccent"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="@dimen/indicatorsTextSize"
-                    android:gravity="start"
-                    android:layout_weight="2"/>
+                    style="@style/MetricsGrayText"
+                    android:text="@string/notificationsFragment_cantRetweets"/>
 
                 <ImageView
                     android:id="@+id/ivLikeTweet"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_like_gray_logo"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_like_gray_logo"/>
 
                 <TextView
                     android:id="@+id/tvNumberLikes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/notificationsFragment_cantLikes"
-                    android:textColor="@color/colorAccent"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="@dimen/indicatorsTextSize"
-                    android:gravity="start"
-                    android:layout_weight="2"/>
+                    style="@style/MetricsGrayText"
+                    android:text="@string/notificationsFragment_cantLikes"/>
 
                 <ImageView
                     android:id="@+id/ivShareTweet"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_share_gray_logo"
-                    android:layout_weight="8"/>
+                    android:layout_weight="8"
+                    android:src="@drawable/ic_share_gray_logo"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

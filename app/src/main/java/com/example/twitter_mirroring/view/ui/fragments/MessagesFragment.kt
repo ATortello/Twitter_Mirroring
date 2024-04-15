@@ -31,7 +31,7 @@ class MessagesFragment : Fragment() {
             .apply(RequestOptions.circleCropTransform())
             .into(binding.ivProfilePictureMessages)
 
-        binding.ivProfilePictureMessages.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Messages screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureMessages.setOnClickListener { Toast.makeText(activity, "Profile picture in Messages screen!", Toast.LENGTH_SHORT).show() }
     }
 
 }

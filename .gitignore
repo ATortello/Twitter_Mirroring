@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 #Jetbrains
@@ -27,7 +26,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 =======
-=======
 >>>>>>> 18b464e8653bf2c3c63a81812ab2317230b5907d
 *.iml
 .gradle
@@ -38,13 +36,8 @@ yarn-error.log*
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-.DS_Store
-/build
 /captures
 .externalNativeBuild
 .cxx
 local.properties
-<<<<<<< HEAD
 >>>>>>> f844202 (Inicio de proyecto)
-=======
->>>>>>> 18b464e8653bf2c3c63a81812ab2317230b5907d

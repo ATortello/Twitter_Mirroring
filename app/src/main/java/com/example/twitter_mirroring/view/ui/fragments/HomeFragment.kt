@@ -34,6 +34,6 @@ class HomeFragment : Fragment(){
             .apply(RequestOptions.circleCropTransform())
             .into(binding.ivProfilePictureHome)
 
-        binding.ivProfilePictureHome.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Home screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureHome.setOnClickListener { Toast.makeText(activity, "Profile picture in Home screen!", Toast.LENGTH_SHORT).show() }
     }
 }

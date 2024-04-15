@@ -35,6 +35,6 @@ class NotificationsFragment : Fragment() {
             .apply(RequestOptions.circleCropTransform())
             .into(binding.ivProfilePictureNotifications)
 
-        binding.ivProfilePictureNotifications.setOnClickListener { Toast.makeText(activity, "Profile picture clicked on Notifications screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivProfilePictureNotifications.setOnClickListener { Toast.makeText(activity, "Profile picture in Notifications screen!", Toast.LENGTH_SHORT).show() }
     }
 }
