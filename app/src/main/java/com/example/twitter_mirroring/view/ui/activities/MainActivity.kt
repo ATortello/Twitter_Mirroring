@@ -1,9 +1,10 @@
-package com.example.twitter_mirroring
+package com.example.twitter_mirroring.view.ui.fragments.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.example.twitter_mirroring.R
 import com.example.twitter_mirroring.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     //Method to indicate the bottom navigation menu and the navigation controller
     fun configNav() {
-        NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this, R.id.fragmentContainer))
+        NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this,
+            R.id.fragmentContainer
+        ))
     }
 }

@@ -9,6 +9,8 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.twitter_mirroring.databinding.FragmentHomeBinding
+import java.text.SimpleDateFormat
+import java.util.Calendar
 
 class HomeFragment : Fragment(){
 
@@ -35,5 +37,16 @@ class HomeFragment : Fragment(){
             .into(binding.ivProfilePictureHome)
 
         binding.ivProfilePictureHome.setOnClickListener { Toast.makeText(activity, "Profile picture in Home screen!", Toast.LENGTH_SHORT).show() }
+        binding.ivTwitterWhiteLogo.setOnClickListener {
+            val currentDateAndTime = Calendar.getInstance().time
+            Toast.makeText(activity, currentDateAndTime.toString(), Toast.LENGTH_LONG).show()
+
+            val differenceBetweenTimes = currentDateAndTime.time - SimpleDateFormat("dd/MM/yyyy HH:mm:ss a").parse("17/04/2024 01:01:00 PM")!!.time
+            val seconds = differenceBetweenTimes/1000
+            val minutes = seconds/60
+            val hours = minutes/60
+            val days = hours/24
+            Toast.makeText(activity, "$differenceBetweenTimes milliseconds\n$seconds seconds\n$minutes minutes\n$hours hours\n$days days", Toast.LENGTH_LONG).show()
+        }
     }
 }

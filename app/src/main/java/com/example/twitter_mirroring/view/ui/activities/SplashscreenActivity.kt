@@ -1,11 +1,10 @@
-package com.example.twitter_mirroring.ui.activities
+package com.example.twitter_mirroring.view.ui.fragments.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.example.twitter_mirroring.MainActivity
 import com.example.twitter_mirroring.R
 import kotlinx.android.synthetic.main.activity_splashscreen.*
 

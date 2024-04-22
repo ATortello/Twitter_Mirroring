@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/splashScreenColor"
-    tools:context=".ui.activities.SplashscreenActivity">
+    tools:context=".view.ui.fragments.activities.SplashscreenActivity">
 
     <ImageView
         android:id="@+id/ivTwitterLogo"

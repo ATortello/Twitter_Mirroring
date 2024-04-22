@@ -33,6 +33,7 @@
                     android:id="@+id/tvPublicName_Feed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/publicUserName"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
@@ -45,7 +46,8 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="5dp"
                     android:contentDescription="@string/TODO"
-                    android:src="@drawable/ic_verified_account_white_logo"/>
+                    android:src="@drawable/ic_verified_account_white_logo"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/tvRealUsername_Feed"
@@ -81,6 +83,7 @@
                 android:textSize="@dimen/translateTextSize"/>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvMediaFeed"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/cardViewHeight"
                 android:layout_marginTop="@dimen/marginAllSides"
@@ -115,10 +118,11 @@
                             android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_4"
-                            android:visibility="visible"/>
+                            android:visibility="gone"/>
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llMediaFeed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/marginSmallAllSides"
