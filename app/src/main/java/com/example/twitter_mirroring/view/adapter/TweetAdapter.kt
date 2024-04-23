@@ -132,6 +132,9 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         p0.tvTimePosted_Feed.text = timeToDisplay
         //Format for detailed tweet page
         //val simpleDateFormatDetailed = SimpleDateFormat("hh:mm a '·' MMM d, yyyy")
+
+        //On Click event
+        p0.itemView.setOnClickListener { tweetListener.onTweetClicked(tweet, p1) }
     }
 
     fun updateData(data: List<TweetData>)

@@ -22,9 +22,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     //Method to indicate the bottom navigation menu and the navigation controller
-    fun configNav() {
-        NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this,
-            R.id.fragmentContainer
-        ))
-    }
+    fun configNav() { NavigationUI.setupWithNavController(bnvMenu, Navigation.findNavController(this,R.id.fragmentContainer)) }
 }

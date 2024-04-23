@@ -1,12 +1,13 @@
 package com.example.twitter_mirroring.viewmodel
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.twitter_mirroring.model.TweetData
 import com.example.twitter_mirroring.network.Callback
 import com.example.twitter_mirroring.network.FirestoreService
 import java.lang.Exception
 
-class TweetDataViewModel {
+class TweetDataViewModel : ViewModel() {
     //Create and instance of FirestoreService
     val firestoreService = FirestoreService()
     var listTweets: MutableLiveData<List<TweetData>> = MutableLiveData()

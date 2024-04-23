@@ -47,7 +47,7 @@
 
     <!-- Texts for Communities Fragment -->
     <string name="spaceListeningText">listening</string>
-<!--    <string name="CommunitiesTitle">Communities</string>-->
+    <!--    <string name="CommunitiesTitle">Communities</string>-->
 
     <!-- Tab's names for Notifications Fragment -->
     <string name="notificationsFragmentTab_All">All</string>

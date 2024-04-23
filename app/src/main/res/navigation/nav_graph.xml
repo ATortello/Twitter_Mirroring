@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_navHomeFragment_to_navDirectMessagesFragment"
             app:destination="@id/navDirectMessagesFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_tweetDetailDialogFragment"
+            app:destination="@id/tweetDetailDialogFragment" />
     </fragment>
 
     <fragment
@@ -48,4 +51,10 @@
         android:name="com.example.twitter_mirroring.view.ui.fragments.MessagesFragment"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
+
+    <dialog
+        android:id="@+id/tweetDetailDialogFragment"
+        android:name="com.example.twitter_mirroring.view.ui.fragments.TweetDetailDialogFragment"
+        android:label="TweetDetailDialogFragment"
+        tools:layout="@layout/fragment_tweet_detail_dialog"/>
 </navigation>
