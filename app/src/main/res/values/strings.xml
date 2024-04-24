@@ -12,7 +12,7 @@
     <string name="publicUserName">Brais Moure</string>
     <string name="realUserName">"&#x40;MoureDev"</string>
     <string name="tweetContent">“you are strong and wise, and i am very proud of you.”</string>
-    <string name="hour">&#x20;·&#x20;7:49 AM</string>
+<!--    <string name="hour">&#x20;·&#x20;7:49 AM</string>-->
     <string name="separatorDot">·</string>
     <string name="date">Jun 16, 2022</string>
     <string name="device"> Twitter for Android</string>

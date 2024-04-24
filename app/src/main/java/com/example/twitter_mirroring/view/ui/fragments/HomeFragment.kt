@@ -19,7 +19,6 @@ import com.example.twitter_mirroring.model.TweetData
 import com.example.twitter_mirroring.view.adapter.TweetAdapter
 import com.example.twitter_mirroring.view.adapter.TweetListener
 import com.example.twitter_mirroring.viewmodel.TweetDataViewModel
-import java.text.SimpleDateFormat
 import java.util.Calendar
 
 class HomeFragment : Fragment(), TweetListener {
@@ -54,20 +53,13 @@ class HomeFragment : Fragment(), TweetListener {
         binding.ivTwitterWhiteLogo.setOnClickListener {
             val currentDateAndTime = Calendar.getInstance().time
             Toast.makeText(activity, currentDateAndTime.toString(), Toast.LENGTH_LONG).show()
-
-            val differenceBetweenTimes = currentDateAndTime.time - SimpleDateFormat("dd/MM/yyyy HH:mm:ss a").parse("17/04/2024 01:01:00 PM")!!.time
-            val seconds = differenceBetweenTimes/1000
-            val minutes = seconds/60
-            val hours = minutes/60
-            val days = hours/24
-            Toast.makeText(activity, "$differenceBetweenTimes milliseconds\n$seconds seconds\n$minutes minutes\n$hours hours\n$days days", Toast.LENGTH_LONG).show()
         }
 
         //Instance of TweetDataViewModel so through the refresh method the info. from Internet can be obtained
         viewModel = ViewModelProviders.of(this).get(TweetDataViewModel::class.java)
         viewModel.refresh()
 
-        //
+        //Setting adapter for RecyclerView
         tweetAdapter = TweetAdapter(this)
         binding.rvFragmentHome.apply {
             layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)

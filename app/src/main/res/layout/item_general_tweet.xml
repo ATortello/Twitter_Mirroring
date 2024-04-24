@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/marginAllSides">
         <ImageView
-            android:id="@+id/ivProfilePicture_Feed"
+            android:id="@+id/ivProfilePictureFeed"
             android:layout_width="@dimen/profilePictureWidthSize"
             android:layout_height="@dimen/profilePictureHeightSize"
             android:layout_marginHorizontal="@dimen/marginAllSides"
@@ -30,44 +30,44 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/tvPublicName_Feed"
+                    android:id="@+id/tvPublicNameFeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/marginSmallAllSides"
+                    android:layout_marginEnd="@dimen/marginExtraSmallAllSides"
                     android:text="@string/publicUserName"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
 
                 <ImageView
-                    android:id="@+id/ivVerifiedLogo_Feed"
+                    android:id="@+id/ivVerifiedLogoFeed"
                     android:layout_width="@dimen/generalSizeLogo"
                     android:layout_height="@dimen/generalSizeLogo"
                     android:layout_gravity="top"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="5dp"
+                    android:layout_marginEnd="3dp"
                     android:contentDescription="@string/TODO"
                     android:src="@drawable/ic_verified_account_white_logo"
-                    android:visibility="gone"/>
+                    android:visibility="visible"/>
 
                 <TextView
-                    android:id="@+id/tvRealUsername_Feed"
+                    android:id="@+id/tvRealUsernameFeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/marginExtraSmallAllSides"
                     android:gravity="top"
                     android:text="@string/realUserName"
                     android:textColor="@color/colorAccent"/>
 
                 <TextView
-                    android:id="@+id/tvTimePosted_Feed"
+                    android:id="@+id/tvTimePostedFeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="top"
-                    android:text="@string/hour"
+                    android:text=""
                     android:textColor="@color/colorAccent"/>
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tvTweetContent_Feed"
+                android:id="@+id/tvTweetContentFeed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tweetContent"
@@ -75,7 +75,7 @@
                 android:textSize="@dimen/contentTweetFeedTextSize"/>
 
             <TextView
-                android:id="@+id/tvTranslateOption_Feed"
+                android:id="@+id/tvTranslateOptionFeed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/optionTranslateTweetText"
@@ -101,7 +101,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/ivTopLeftImage_Feed"
+                            android:id="@+id/ivTopLeftImageFeed"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -110,7 +110,7 @@
                             android:src="@drawable/padme_1"/>
 
                         <ImageView
-                            android:id="@+id/ivBottomLeftImage_Feed"
+                            android:id="@+id/ivBottomLeftImageFeed"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/marginSmallAllSides"
@@ -131,7 +131,7 @@
                         android:visibility="visible">
 
                         <ImageView
-                            android:id="@+id/ivTopRightImage_Feed"
+                            android:id="@+id/ivTopRightImageFeed"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -141,7 +141,7 @@
                             android:visibility="visible"/>
 
                         <ImageView
-                            android:id="@+id/ivBottomRightImage_Feed"
+                            android:id="@+id/ivBottomRightImageFeed"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/marginSmallAllSides"
@@ -160,7 +160,7 @@
                 android:layout_marginTop="@dimen/marginAllSides"
                 android:orientation="horizontal">
                 <ImageView
-                    android:id="@+id/ivReply_Feed"
+                    android:id="@+id/ivReplyFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -168,12 +168,12 @@
                     android:src="@drawable/ic_reply_gray_logo"/>
 
                 <TextView
-                    android:id="@+id/tvCantReplies_Feed"
+                    android:id="@+id/tvCantRepliesFeed"
                     style="@style/MetricsGrayText"
                     android:text="@string/cantRetweets"/>
 
                 <ImageView
-                    android:id="@+id/ivRetweet_Feed"
+                    android:id="@+id/ivRetweetFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -181,12 +181,12 @@
                     android:src="@drawable/ic_retweet_gray_logo"/>
 
                 <TextView
-                    android:id="@+id/tvCantRetweets_Feed"
+                    android:id="@+id/tvCantRetweetsFeed"
                     style="@style/MetricsGrayText"
                     android:text="@string/cantRetweets"/>
 
                 <ImageView
-                    android:id="@+id/ivLikeTweet_Feed"
+                    android:id="@+id/ivLikeTweetFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -194,12 +194,12 @@
                     android:src="@drawable/ic_like_gray_logo"/>
 
                 <TextView
-                    android:id="@+id/tvCantLikes_Feed"
+                    android:id="@+id/tvCantLikesFeed"
                     style="@style/MetricsGrayText"
                     android:text="@string/cantTweetLikes"/>
 
                 <ImageView
-                    android:id="@+id/ivViews_Feed"
+                    android:id="@+id/ivViewsFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -207,12 +207,12 @@
                     android:src="@drawable/ic_view_gray_logo"/>
 
                 <TextView
-                    android:id="@+id/tvCantViews_Feed"
+                    android:id="@+id/tvCantViewsFeed"
                     style="@style/MetricsGrayText"
                     android:text="@string/cantTweetViews"/>
 
                 <ImageView
-                    android:id="@+id/ivBookmark_Feed"
+                    android:id="@+id/ivBookmarkFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/marginAllSides"
@@ -221,7 +221,7 @@
                     android:src="@drawable/ic_bookmark_gray_logo"/>
 
                 <ImageView
-                    android:id="@+id/ivShare_Feed"
+                    android:id="@+id/ivShareFeed"
                     android:layout_width="@dimen/tweetActionsWidth"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

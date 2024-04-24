@@ -14,6 +14,7 @@ import com.example.twitter_mirroring.R
 import com.example.twitter_mirroring.model.TweetData
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 
 class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<TweetAdapter.ViewHolder>() {
 
@@ -32,110 +33,118 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
     //With the this class the frontend and the logic are connected
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-        var ivProfilePicture_Feed = itemView.findViewById<ImageView>(R.id.ivProfilePicture_Feed)
-        var ivVerifiedLogo_Feed = itemView.findViewById<ImageView>(R.id.ivVerifiedLogo_Feed)
-        var photo1 = itemView.findViewById<ImageView>(R.id.ivTopLeftImage_Feed)
-        var photo2 = itemView.findViewById<ImageView>(R.id.ivTopRightImage_Feed)
-        var photo3 = itemView.findViewById<ImageView>(R.id.ivBottomLeftImage_Feed)
-        var photo4 = itemView.findViewById<ImageView>(R.id.ivBottomRightImage_Feed)
-        var tvCantLikes_Feed = itemView.findViewById<TextView>(R.id.tvCantLikes_Feed)
-        var tvCantReplies_Feed = itemView.findViewById<TextView>(R.id.tvCantReplies_Feed)
-        var tvCantRetweets_Feed = itemView.findViewById<TextView>(R.id.tvCantRetweets_Feed)
-        var tvCantViews_Feed = itemView.findViewById<TextView>(R.id.tvCantViews_Feed)
-        var tvPublicName_Feed = itemView.findViewById<TextView>(R.id.tvPublicName_Feed)
-        var tvRealUsername_Feed = itemView.findViewById<TextView>(R.id.tvRealUsername_Feed)
-        var tvTimePosted_Feed = itemView.findViewById<TextView>(R.id.tvTimePosted_Feed)
-        var tvTweetContent_Feed = itemView.findViewById<TextView>(R.id.tvTweetContent_Feed)
-        var cvMediaContent = itemView.findViewById<CardView>(R.id.cvMediaFeed)
-        var llMediaFeed = itemView.findViewById<LinearLayout>(R.id.llMediaFeed)
+        var ivProfilePictureFeed: ImageView? = itemView.findViewById(R.id.ivProfilePictureFeed)
+        var ivVerifiedLogoFeed: ImageView? = itemView.findViewById(R.id.ivVerifiedLogoFeed)
+        var photo1: ImageView? = itemView.findViewById(R.id.ivTopLeftImageFeed)
+        var photo2: ImageView? = itemView.findViewById(R.id.ivTopRightImageFeed)
+        var photo3: ImageView? = itemView.findViewById(R.id.ivBottomLeftImageFeed)
+        var photo4: ImageView? = itemView.findViewById(R.id.ivBottomRightImageFeed)
+        var tvCantLikesFeed: TextView? = itemView.findViewById(R.id.tvCantLikesFeed)
+        var tvCantRepliesFeed: TextView? = itemView.findViewById(R.id.tvCantRepliesFeed)
+        var tvCantRetweetsFeed: TextView? = itemView.findViewById(R.id.tvCantRetweetsFeed)
+        var tvCantViewsFeed: TextView? = itemView.findViewById(R.id.tvCantViewsFeed)
+        var tvPublicNameFeed: TextView? = itemView.findViewById(R.id.tvPublicNameFeed)
+        var tvRealUsernameFeed: TextView? = itemView.findViewById(R.id.tvRealUsernameFeed)
+        var tvTimePostedFeed: TextView? = itemView.findViewById(R.id.tvTimePostedFeed)
+        var tvTweetContentFeed: TextView? = itemView.findViewById(R.id.tvTweetContentFeed)
+        var cvMediaContent: CardView? = itemView.findViewById(R.id.cvMediaFeed)
+        var llMediaFeed: LinearLayout? = itemView.findViewById(R.id.llMediaFeed)
     }
 
     //Here the data obtained from the source is matched with the frontend components
     override fun onBindViewHolder(p0: TweetAdapter.ViewHolder, p1: Int) {
         val tweet = listOfTweets[p1]
 
-        //Setting images: Profile, verified logo (if applies) and media content
+        /*Setting images: Profile, verified logo (if applies) and media content*/
         Glide
             .with(p0.itemView.context)
             .load(tweet.profilePhoto)
             .apply(RequestOptions.circleCropTransform())
-            .into(p0.ivProfilePicture_Feed)
+            .into(p0.ivProfilePictureFeed!!)
 
-        if(tweet.verifiedLogo) { p0.ivVerifiedLogo_Feed.visibility = View.VISIBLE }
-        else { p0.ivVerifiedLogo_Feed.visibility = View.GONE }
+        if(tweet.verifiedLogo) { p0.ivVerifiedLogoFeed!!.visibility = View.VISIBLE }
+        else { p0.ivVerifiedLogoFeed!!.visibility = View.GONE }
 
         //Managing CardView grid to show images
         when(tweet.mediaCount) {
-            1 -> { p0.cvMediaContent.visibility = View.VISIBLE
-                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1) }
+            1 -> { p0.cvMediaContent!!.visibility = View.VISIBLE
+                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1!!) }
 
-            2 -> { p0.cvMediaContent.visibility = View.VISIBLE
-                p0.llMediaFeed.visibility = View.VISIBLE
-                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2) }
+            2 -> { p0.cvMediaContent!!.visibility = View.VISIBLE
+                p0.llMediaFeed!!.visibility = View.VISIBLE
+                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2!!) }
 
-            3 -> { p0.cvMediaContent.visibility = View.VISIBLE
-                p0.llMediaFeed.visibility = View.VISIBLE
-                p0.photo4.visibility = View.VISIBLE
-                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl3).into(p0.photo3) }
+            3 -> { p0.cvMediaContent!!.visibility = View.VISIBLE
+                p0.llMediaFeed!!.visibility = View.VISIBLE
+                p0.photo4!!.visibility = View.VISIBLE
+                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl3).into(p0.photo3!!) }
 
-            4 -> { p0.cvMediaContent.visibility = View.VISIBLE
-                p0.llMediaFeed.visibility = View.VISIBLE
-                p0.photo3.visibility = View.VISIBLE
-                p0.photo4.visibility = View.VISIBLE
-                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl3).into(p0.photo3)
-                Glide.with(p0.itemView.context).load(tweet.photoUrl4).into(p0.photo4)
+            4 -> { p0.cvMediaContent!!.visibility = View.VISIBLE
+                p0.llMediaFeed!!.visibility = View.VISIBLE
+                p0.photo3!!.visibility = View.VISIBLE
+                p0.photo4!!.visibility = View.VISIBLE
+                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl2).into(p0.photo2!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl3).into(p0.photo3!!)
+                Glide.with(p0.itemView.context).load(tweet.photoUrl4).into(p0.photo4!!)
             }
-            else -> p0.cvMediaContent.visibility = View.GONE
+            else -> p0.cvMediaContent!!.visibility = View.GONE
         }
 
-        //Setting texts:
-        p0.tvCantLikes_Feed.text = tweet.cantLikes.toString()
-        p0.tvCantReplies_Feed.text = tweet.cantReplies.toString()
-        p0.tvCantRetweets_Feed.text = tweet.cantRetweetsAndReposts.toString()
-        p0.tvCantViews_Feed.text = tweet.cantViews.toString()
-        p0.tvPublicName_Feed.text = tweet.publicName
-        p0.tvRealUsername_Feed.text = tweet.realUsername
-        p0.tvTweetContent_Feed.text = tweet.tweetContent
+        /*Setting texts:*/
+        p0.tvCantLikesFeed!!.text = tweet.cantLikes.toString()
+        p0.tvCantRepliesFeed!!.text = tweet.cantReplies.toString()
+        p0.tvCantRetweetsFeed!!.text = tweet.cantRetweetsAndReposts.toString()
+        p0.tvCantViewsFeed!!.text = tweet.cantViews.toString()
+        p0.tvPublicNameFeed!!.text = tweet.publicName
+        p0.tvRealUsernameFeed!!.text = "@${tweet.realUsername}"
+        p0.tvTweetContentFeed!!.text = tweet.tweetContent
 
-        //Calculating time between system's current date and date get from Firestore
-        val currentDateAndTime = Calendar.getInstance().time
-        val diffInSeconds = (currentDateAndTime.time - tweet.hourAndDate.time)/1000
-
-        //Setting date formats according to how long the tweets were posted
-        val simpleDateFormat = when(diffInSeconds) {
-            in 0..59 -> SimpleDateFormat("s")
-            in 60..3599 -> SimpleDateFormat("m")
-            in 3600..86399 -> SimpleDateFormat("h")
-            in 86400..604799 -> SimpleDateFormat("d")
-            in 604800..2678399 -> SimpleDateFormat("d MMM")
-            else -> SimpleDateFormat("d MMM yy")
-        }
-
+        /*Calculating time between system's current date and post's dates from Firestore:*/
+        val diffInSeconds = (System.currentTimeMillis() - tweet.hourAndDate.time)/1000
         val cal = Calendar.getInstance()
         cal.time = tweet.hourAndDate
 
-        //Setting texts to show depending the date's format previously configured
-        val timeToDisplay = when(diffInSeconds) {
-            in 0..59 -> "${simpleDateFormat.format(cal.time)}s"
-            in 60..3599 -> "${simpleDateFormat.format(cal.time)}m"
-            in 3600..86399 -> "${simpleDateFormat.format(cal.time)}h"
-            in 86400..604799 -> "${simpleDateFormat.format(cal.time)}d"
-            in 604800..2678399 -> (simpleDateFormat.format(cal.time)).toString()
-            else -> (simpleDateFormat.format(cal.time)).toString()
+        /*var diffInDays = (diffInSeconds / 86400).toInt()
+        println("Log ARTD - Difference: ${diffInDays} days")*/
+        //Setting date formats according to how long the tweets were posted
+        val pattern = when(diffInSeconds) {
+            in 0..59 -> "s"
+            in 60..3599 -> "m"
+            in 3600..86399 -> "h"
+            in 86400..604799 -> "d"
+            in 604800..2678399 -> "d MMM"
+            else -> "d MMM yy"
         }
+        /*println("Log ARTD - Pattern selected: $pattern")*/
 
-        p0.tvTimePosted_Feed.text = timeToDisplay
+        //Setting texts to show depending the date's format previously configured
+        val simpleDateFormat = SimpleDateFormat(pattern)
+        val timeToDisplay = when(pattern) {
+            "s" -> "${ timeGap(cal.time, simpleDateFormat) }s"
+            "m" -> "${ timeGap(cal.time, simpleDateFormat) }m"
+            "h" -> "${ timeGap(cal.time, simpleDateFormat) }h"
+            "d" -> "${ timeGap(cal.time, simpleDateFormat) }d"
+            "d MMM" -> simpleDateFormat.format(cal.time)
+            else -> simpleDateFormat.format(cal.time)
+        }
+        /*println("Log ARTD - Time to display: $timeToDisplay")*/
+
+        p0.tvTimePostedFeed!!.setText(" · $timeToDisplay")
         //Format for detailed tweet page
         //val simpleDateFormatDetailed = SimpleDateFormat("hh:mm a '·' MMM d, yyyy")
 
         //On Click event
         p0.itemView.setOnClickListener { tweetListener.onTweetClicked(tweet, p1) }
+
     }
+
+    //Difference between the current date and the post's dates from Firestore
+    fun timeGap(firestoreDate: Date, simpleDateFormat: SimpleDateFormat) : Int =
+        (simpleDateFormat.format(System.currentTimeMillis()).toInt()) - (simpleDateFormat.format(firestoreDate).toInt())
 
     fun updateData(data: List<TweetData>)
     {
