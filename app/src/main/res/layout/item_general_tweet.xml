@@ -107,7 +107,8 @@
                             android:layout_weight="1"
                             android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/padme_1"/>
+                            android:src="@drawable/padme_1"
+                            android:visibility="visible"/>
 
                         <ImageView
                             android:id="@+id/ivBottomLeftImageFeed"
@@ -118,7 +119,7 @@
                             android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_4"
-                            android:visibility="gone"/>
+                            android:visibility="visible"/>
                     </LinearLayout>
 
                     <LinearLayout
