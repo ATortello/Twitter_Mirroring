@@ -36,7 +36,7 @@
     <dimen name="marginSmallAllSides">5dp</dimen>
     <dimen name="marginMinimal">1dp</dimen>
     <dimen name="marginExtraSmallAllSides">2dp</dimen>
-    <dimen name="cardViewHeight">200dp</dimen>
+    <dimen name="cardViewHeight">240dp</dimen>
     <dimen name="tweetActionsWidth">0dp</dimen>
 
     <!-- Direct Messages sizes -->

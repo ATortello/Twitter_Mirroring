@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -41,6 +42,10 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         val photo2: ImageView? = itemView.findViewById(R.id.ivTopRightImageFeed)
         val photo3: ImageView? = itemView.findViewById(R.id.ivBottomLeftImageFeed)
         val photo4: ImageView? = itemView.findViewById(R.id.ivBottomRightImageFeed)
+        val video1: VideoView? = itemView.findViewById(R.id.ivTopLeftVideoFeed)
+        val video2: VideoView? = itemView.findViewById(R.id.ivTopRightVideoFeed)
+        val video3: VideoView? = itemView.findViewById(R.id.ivBottomLeftVideoFeed)
+        val video4: VideoView? = itemView.findViewById(R.id.ivBottomRightVideoFeed)
         val tvCantLikesFeed: TextView? = itemView.findViewById(R.id.tvCantLikesFeed)
         val tvCantRepliesFeed: TextView? = itemView.findViewById(R.id.tvCantRepliesFeed)
         val tvCantRetweetsFeed: TextView? = itemView.findViewById(R.id.tvCantRetweetsFeed)
@@ -59,6 +64,10 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
             photo2!!.visibility = View.GONE
             photo3!!.visibility = View.GONE
             photo4!!.visibility = View.GONE
+            video1!!.visibility = View.GONE
+            video2!!.visibility = View.GONE
+            video3!!.visibility = View.GONE
+            video4!!.visibility = View.GONE
         }
     }
 
@@ -69,9 +78,11 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         val context = p0.itemView.context
         val circleTransformation = RequestOptions.circleCropTransform()
         val noTransformation = noTransformation()
+        val fileType : Array<String> = arrayOf("","","","")
+        val message = "ARTD - No image/gif or video link. Please check!"
 
         /*Setting images: Profile, verified logo (if applies) and media content*/
-        showWithGlide(context, tweet.profilePhoto, circleTransformation, p0.ivProfilePictureFeed)
+        showImage(context, tweet.profilePhoto, circleTransformation, p0.ivProfilePictureFeed)
 
         //Showing logo or not
         if(tweet.verifiedLogo) p0.ivVerifiedLogoFeed!!.visibility = View.VISIBLE
@@ -80,37 +91,82 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         //Managing CardView elements to show images get from Firestore
         if (!tweet.hasMedia) p0.cvMediaContent!!.visibility = View.GONE
         else {  p0.cvMediaContent!!.visibility = visibility
-            p0.photo1!!.visibility = visibility
+            fileType[0] = mediaSelector(tweet.photoUrl1)
+            fileType[1] = mediaSelector(tweet.photoUrl2)
+            fileType[2] = mediaSelector(tweet.photoUrl3)
+            fileType[3] = mediaSelector(tweet.photoUrl4)
 
-//            if(tweet.photoUrl1.contains(".mp4")) {
-//                p0.photo1!!.visibility = View.VISIBLE
-//                Glide.with(p0.itemView.context).load(tweet.photoUrl1).into(p0.photo1!!)
-//            }
+            when (fileType[0]) {
+                "img/gif" -> p0.photo1!!.visibility = visibility
+                "video" -> p0.video1!!.visibility = visibility
+                else -> print(message) }
 
             //Managing CardView grid to show images
             when(tweet.mediaCount) {
-                1 -> showWithGlide(context, tweet.photoUrl1, noTransformation, p0.photo1)
+                1 -> when (fileType[0]) {
+                    "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, p0.photo1)
+                    "video" -> showVideo(tweet.photoUrl1, p0.video1)
+                    else -> print(message) }
 
                 2 -> { p0.llMediaFeed!!.visibility = visibility
-                    p0.photo2!!.visibility = visibility
-                    showWithGlide(context, tweet.photoUrl1, noTransformation, p0.photo1)
-                    showWithGlide(context, tweet.photoUrl2, noTransformation, p0.photo2) }
+                    when (fileType[0]) {
+                        "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, p0.photo1)
+                        "video" -> showVideo(tweet.photoUrl1, p0.video1)
+                        else -> print(message) }
+
+                    when (fileType[1]) {
+                        "img/gif" -> { p0.photo2!!.visibility = visibility
+                            showImage(context, tweet.photoUrl2, noTransformation, p0.photo2) }
+                        "video" -> { p0.video2!!.visibility = visibility
+                            showVideo(tweet.photoUrl2, p0.video2) }
+                        else -> print(message) } }
 
                 3 -> { p0.llMediaFeed!!.visibility = visibility
-                    p0.photo2!!.visibility = visibility
-                    p0.photo4!!.visibility = visibility
-                    showWithGlide(context, tweet.photoUrl1, noTransformation, p0.photo1)
-                    showWithGlide(context, tweet.photoUrl2, noTransformation, p0.photo2)
-                    showWithGlide(context, tweet.photoUrl3, noTransformation, p0.photo4) }
+                    when (fileType[0]) {
+                        "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, p0.photo1)
+                        "video" -> showVideo(tweet.photoUrl1, p0.video1)
+                        else -> print(message) }
+
+                    when (fileType[1]) {
+                        "img/gif" -> { p0.photo2!!.visibility = visibility
+                            showImage(context, tweet.photoUrl2, noTransformation, p0.photo2) }
+                        "video" -> { p0.video2!!.visibility = visibility
+                            showVideo(tweet.photoUrl2, p0.video2) }
+                        else -> print(message) }
+
+                    when (fileType[2]) {
+                        "img/gif" -> { p0.photo4!!.visibility = visibility
+                            showImage(context, tweet.photoUrl3, noTransformation, p0.photo4) }
+                        "video" -> { p0.video4!!.visibility = visibility
+                            showVideo(tweet.photoUrl3, p0.video4) }
+                        else -> print(message) } }
 
                 4 -> { p0.llMediaFeed!!.visibility = visibility
-                    p0.photo2!!.visibility = visibility
-                    p0.photo3!!.visibility = visibility
-                    p0.photo4!!.visibility = visibility
-                    showWithGlide(context, tweet.photoUrl1, noTransformation, p0.photo1)
-                    showWithGlide(context, tweet.photoUrl2, noTransformation, p0.photo2)
-                    showWithGlide(context, tweet.photoUrl3, noTransformation, p0.photo3)
-                    showWithGlide(context, tweet.photoUrl4, noTransformation, p0.photo4) }
+                    when (fileType[0]) {
+                        "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, p0.photo1)
+                        "video" -> showVideo(tweet.photoUrl1, p0.video1)
+                        else -> print(message) }
+
+                    when (fileType[1]) {
+                        "img/gif" -> { p0.photo2!!.visibility = visibility
+                            showImage(context, tweet.photoUrl2, noTransformation, p0.photo2) }
+                        "video" -> { p0.video2!!.visibility = visibility
+                            showVideo(tweet.photoUrl2, p0.video2) }
+                        else -> print(message) }
+
+                    when (fileType[2]) {
+                        "img/gif" -> { p0.photo3!!.visibility = visibility
+                            showImage(context, tweet.photoUrl3, noTransformation, p0.photo3) }
+                        "video" -> { p0.video3!!.visibility = visibility
+                            showVideo(tweet.photoUrl3, p0.video3) }
+                        else -> print(message) }
+
+                    when (fileType[3]) {
+                        "img/gif" -> { p0.photo4!!.visibility = visibility
+                            showImage(context, tweet.photoUrl4, noTransformation, p0.photo4) }
+                        "video" -> { p0.video4!!.visibility = visibility
+                            showVideo(tweet.photoUrl4, p0.video4) }
+                        else -> print(message) } }
 
                 else -> p0.cvMediaContent.visibility = View.GONE
             }
@@ -130,33 +186,44 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         val cal = Calendar.getInstance()
         cal.time = tweet.hourAndDate
 
-        //Setting date formats according to how long the tweets were posted
-        val pattern = when(diffInSeconds) {
-            in 0..59 -> "s"
-            in 60..3599 -> "m"
-            in 3600..86399 -> "h"
-            in 86400..604799 -> "d"
-            in 604800..2678399 -> "d MMM"
-            else -> "d MMM yy"
-        }
+            //Setting date formats according to how long the tweets were posted
+            val pattern = when(diffInSeconds) {
+                in 0..59 -> "s"
+                in 60..3599 -> "m"
+                in 3600..86399 -> "h"
+                in 86400..604799 -> "d"
+                in 604800..2678399 -> "d MMM"
+                else -> "d MMM yy"
+            }
 
-        //Setting texts to show depending the date's format previously configured
-        val simpleDateFormat = SimpleDateFormat(pattern)
-        val timeToDisplay = when(pattern) {
-            "s" -> "${ timeGap(cal.time, simpleDateFormat) }s"
-            "m" -> "${ timeGap(cal.time, simpleDateFormat) }m"
-            "h" -> "${ timeGap(cal.time, simpleDateFormat) }h"
-            "d" -> "${ timeGap(cal.time, simpleDateFormat) }d"
-            "d MMM" -> simpleDateFormat.format(cal.time)
-            else -> simpleDateFormat.format(cal.time)
-        }
-        p0.tvTimePostedFeed!!.setText(" · $timeToDisplay")
+            //Setting texts to show depending the date's format previously configured
+            val simpleDateFormat = SimpleDateFormat(pattern)
+            val timeToDisplay = when(pattern) {
+                "s" -> "${ timeGap(cal.time, simpleDateFormat) }s"
+                "m" -> "${ timeGap(cal.time, simpleDateFormat) }m"
+                "h" -> "${ timeGap(cal.time, simpleDateFormat) }h"
+                "d" -> "${ timeGap(cal.time, simpleDateFormat) }d"
+                "d MMM" -> simpleDateFormat.format(cal.time)
+                else -> simpleDateFormat.format(cal.time)
+            }
+            p0.tvTimePostedFeed!!.setText(" · $timeToDisplay")
 
         //On Click event
         p0.itemView.setOnClickListener { tweetListener.onTweetClicked(tweet, p1) }
     }
 
-    fun showWithGlide(context: Context, url: String, requestOptions: RequestOptions = noTransformation(), imageView: ImageView?) {
+    fun mediaSelector(mediaURL: String) : String {
+        return if (mediaURL != "") {
+            if (!mediaURL.contains("mp4")) "img/gif" else "video"
+        } else ""
+    }
+
+    fun showVideo(url: String?, videoView: VideoView?) {
+        videoView!!.setVideoPath(url)
+        videoView.start()
+    }
+
+    fun showImage(context: Context, url: String, requestOptions: RequestOptions = noTransformation(), imageView: ImageView?) {
         Glide.with(context)
              .load(url)
              .apply(requestOptions)

@@ -108,7 +108,17 @@
                             android:contentDescription="@string/TODO"
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_1"
-                            android:visibility="visible"/>
+                            android:visibility="visible"
+                            android:maxHeight="400dp"/>
+                        <VideoView
+                            android:id="@+id/ivTopLeftVideoFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            android:maxHeight="400dp"/>
 
                         <ImageView
                             android:id="@+id/ivBottomLeftImageFeed"
@@ -120,6 +130,15 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_4"
                             android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivBottomLeftVideoFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -130,7 +149,6 @@
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:visibility="visible">
-
                         <ImageView
                             android:id="@+id/ivTopRightImageFeed"
                             android:layout_width="match_parent"
@@ -140,6 +158,14 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_2"
                             android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivTopRightVideoFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
 
                         <ImageView
                             android:id="@+id/ivBottomRightImageFeed"
@@ -151,6 +177,15 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/padme_3"
                             android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivBottomRightVideoFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
