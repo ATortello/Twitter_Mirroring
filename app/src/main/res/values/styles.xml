@@ -30,4 +30,22 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/metricsTweetDetailTextSize</item>
     </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Setting no Title since we already have a Toolbar and apps colors -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/backgroundDark</item>
+
+        <!-- Setting fullscreen size and no floating -->
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- Setting screen background -->
+        <item name="android:windowBackground">#FFF</item>
+
+        <!-- Setting animations to enter and exit detail screen -->
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
 </resources>

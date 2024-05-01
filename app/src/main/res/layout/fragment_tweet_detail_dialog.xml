@@ -7,304 +7,358 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTweetDetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides">
-        <ImageView
-            android:id="@+id/ivProfilePicture_Detail"
-            android:layout_width="@dimen/profilePictureWidthSize"
-            android:layout_height="40dp"
-            android:contentDescription="@string/profilePicture"
-            android:src="@drawable/profile_picture"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/tvPublicName_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginAllSides"
-            android:text="@string/publicUserName"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture_Detail"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <ImageView
-            android:id="@+id/ivVerifiedLogo_Detail"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginStart="@dimen/marginExtraSmallAllSides"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_verified_account_white_logo"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/tvPublicName_Detail"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/tvRealUsername_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginAllSides"
-            android:text="@string/realUserName"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toEndOf="@+id/ivProfilePicture_Detail"
-            app:layout_constraintTop_toBottomOf="@+id/tvPublicName_Detail"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/tvTweetContent_Detail"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/tweetContent"
-        android:textColor="@color/white"
-        android:textSize="@dimen/contentTweetDetailTextSize"/>
+        android:layout_height="@dimen/viewHeightSize"
+        android:background="@color/colorAccent"/>
 
-    <TextView
-        android:id="@+id/tvTranslateOption_Detail"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginAllSides"
-        android:layout_marginEnd="@dimen/marginAllSides"
-        android:text="@string/optionTranslateTweetText"
-        android:textColor="@color/splashScreenColor"
-        android:textSize="@dimen/translateTextSize"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMedia_Detail"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/cardViewHeight"
-        android:layout_margin="@dimen/marginAllSides"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/cardCornerRadius">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginAllSides">
                 <ImageView
-                    android:id="@+id/ivTopLeftImage_Detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/TODO"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_1"/>
+                    android:id="@+id/ivProfilePictureDetail"
+                    android:layout_width="@dimen/profilePictureWidthSize"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/profilePicture"
+                    android:src="@drawable/profile_picture"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvPublicNameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginAllSides"
+                    android:text="@string/publicUserName"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/ivProfilePictureDetail"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
-                    android:id="@+id/ivBottomLeftImage_Detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
+                    android:id="@+id/ivVerifiedLogoDetail"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="@dimen/marginExtraSmallAllSides"
                     android:contentDescription="@string/TODO"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_4"
-                    android:visibility="visible"/>
-            </LinearLayout>
+                    android:src="@drawable/ic_verified_account_white_logo"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/tvPublicNameDetail"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-            <LinearLayout
+                <TextView
+                    android:id="@+id/tvRealUsernameDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginAllSides"
+                    android:text="@string/realUserName"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@+id/ivProfilePictureDetail"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPublicNameDetail"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTweetContentDetail"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:visibility="visible">
+                android:layout_marginEnd="10dp"
+                android:text="@string/tweetContent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/contentTweetDetailTextSize"/>
 
-                <ImageView
-                    android:id="@+id/ivTopRightImage_Detail"
+            <TextView
+                android:id="@+id/tvTranslateOptionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginAllSides"
+                android:layout_marginEnd="@dimen/marginAllSides"
+                android:text="@string/optionTranslateTweetText"
+                android:textColor="@color/splashScreenColor"
+                android:textSize="@dimen/translateTextSize"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMediaDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardViewHeight"
+                android:layout_margin="@dimen/marginAllSides"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/cardCornerRadius">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/TODO"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_2"
+                    android:background="@color/colorPrimary"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/ivTopLeftImageDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_1"/>
+                        <VideoView
+                            android:id="@+id/ivTopLeftVideoDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            android:maxHeight="400dp"/>
+
+                        <ImageView
+                            android:id="@+id/ivBottomLeftImageDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_4"
+                            android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivBottomLeftVideoDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMediaDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <ImageView
+                            android:id="@+id/ivTopRightImageDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_2"
+                            android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivTopRightVideoDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/ivBottomRightImageDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/padme_3"
+                            android:visibility="visible"/>
+                        <VideoView
+                            android:id="@+id/ivBottomRightVideoDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/marginSmallAllSides"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/TODO"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginAllSides"
+                android:layout_marginBottom="@dimen/marginAllSides"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTimePostedDetail"
+                    style="@style/DateAndTimeGrayText"
+                    android:text="@string/timePosted"/>
+
+                <TextView
+                    android:id="@+id/tvDateDetail"
+                    style="@style/DateAndTimeGrayText"
+                    android:text="@string/datePosted"/>
+
+                <TextView
+                    android:id="@+id/tvViewsDetail"
+                    style="@style/MetricsWhiteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantTweetViews"
+                    android:textSize="@dimen/dateAndDeviceTextSize"
                     android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/ivBottomRightImage_Detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/TODO"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/padme_3"
+                <TextView
+                    style="@style/DateAndTimeGrayText"
+                    android:text="@string/labelCantTweetViews"
                     android:visibility="visible"/>
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewHeightSize"
+                android:layout_marginHorizontal="@dimen/marginAllSides"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:id="@+id/llMetricsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginAllSides"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/tvCantRetweetsDetail"
+                    style="@style/MetricsWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantRetweets"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/LabelsGrayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelCantReposts"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tvCantQuoteTweetsDetail"
+                    style="@style/MetricsWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantQuoteTweets"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/LabelsGrayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelCantQuoteTweets"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tvCantLikesDetail"
+                    style="@style/MetricsWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantTweetLikes"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/LabelsGrayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelCantTweetLikes"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tvCantBookmarksDetail"
+                    style="@style/MetricsWhiteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantTweetBookmarks"
+                    android:visibility="visible"/>
+
+                <TextView
+                    style="@style/LabelsGrayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelCantTweetBookmarks"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewHeightSize"
+                android:layout_marginHorizontal="@dimen/marginAllSides"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/marginAllSides"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivReplyDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
+                    android:src="@drawable/ic_reply_gray_logo"/>
+
+                <ImageView
+                    android:id="@+id/ivRetweetDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
+                    android:src="@drawable/ic_retweet_gray_logo"/>
+
+                <ImageView
+                    android:id="@+id/ivLikeDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
+                    android:src="@drawable/ic_like_gray_logo"/>
+
+                <ImageView
+                    android:id="@+id/ivBookmarkDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
+                    android:src="@drawable/ic_bookmark_gray_logo"/>
+
+                <ImageView
+                    android:id="@+id/ivShareDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightTweetActions"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/TODO"
+                    android:src="@drawable/ic_share_gray_logo"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewHeightSize"
+                android:background="@color/colorAccent"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/marginAllSides"
-        android:layout_marginBottom="@dimen/marginAllSides"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvTimePosted_Detail"
-            style="@style/DateAndTimeGrayText"
-            android:text="@string/timePosted"/>
-
-        <TextView
-            android:id="@+id/tvDate_Detail"
-            style="@style/DateAndTimeGrayText"
-            android:text="@string/datePosted"/>
-
-        <TextView
-            android:id="@+id/tvViews_Detail"
-            style="@style/MetricsWhiteText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cantTweetViews"
-            android:textSize="@dimen/dateAndDeviceTextSize"
-            android:visibility="visible"/>
-
-        <TextView
-            style="@style/DateAndTimeGrayText"
-            android:text="@string/labelCantTweetViews"
-            android:visibility="visible"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewHeightSize"
-        android:layout_marginHorizontal="@dimen/marginAllSides"
-        android:background="@color/colorAccent"/>
-
-    <LinearLayout
-        android:id="@+id/llMetrics_Detail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginAllSides"
-        android:orientation="horizontal"
-        android:visibility="visible">
-        <TextView
-            android:id="@+id/tvCantRetweets_Detail"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cantRetweets"
-            android:visibility="visible"/>
-
-        <TextView
-            style="@style/LabelsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCantReposts"
-            android:visibility="visible"/>
-
-        <TextView
-            android:id="@+id/tvCantQuoteTweets_Detail"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cantQuoteTweets"
-            android:visibility="visible"/>
-
-        <TextView
-            style="@style/LabelsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCantQuoteTweets"
-            android:visibility="visible"/>
-
-        <TextView
-            android:id="@+id/tvCantLikes_Detail"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cantTweetLikes"
-            android:visibility="visible"/>
-
-        <TextView
-            style="@style/LabelsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCantTweetLikes"
-            android:visibility="visible"/>
-
-        <TextView
-            android:id="@+id/tvCantBookmarks_Detail"
-            style="@style/MetricsWhiteText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cantTweetBookmarks"
-            android:visibility="visible"/>
-
-        <TextView
-            style="@style/LabelsGrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelCantTweetBookmarks"
-            android:visibility="visible"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewHeightSize"
-        android:layout_marginHorizontal="@dimen/marginAllSides"
-        android:background="@color/colorAccent"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/marginAllSides"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/ivReply_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_reply_gray_logo"/>
-
-        <ImageView
-            android:id="@+id/ivRetweet_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_retweet_gray_logo"/>
-
-        <ImageView
-            android:id="@+id/ivLike_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_like_gray_logo"/>
-
-        <ImageView
-            android:id="@+id/ivBookmark_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_bookmark_gray_logo"/>
-
-        <ImageView
-            android:id="@+id/ivShare_Detail"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heightTweetActions"
-            android:layout_weight="1"
-            android:contentDescription="@string/TODO"
-            android:src="@drawable/ic_share_gray_logo"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewHeightSize"
-        android:background="@color/colorAccent"/>
+    </ScrollView>
 </LinearLayout>

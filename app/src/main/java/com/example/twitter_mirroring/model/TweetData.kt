@@ -1,8 +1,9 @@
 package com.example.twitter_mirroring.model
 
+import java.io.Serializable
 import java.util.Date
 
-class TweetData {
+class TweetData : Serializable{
     var cantBookmarks: Long = 0
     var cantLikes: Long = 0
     var cantReplies: Long = 0

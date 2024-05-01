@@ -80,4 +80,5 @@
     <string name="splashScreen">AppImageLogo</string>
     <string name="profilePicture">ProfilePicture</string>
     <string name="TODO">ToDo</string>
+    <string name="toolbarTweetDetailTitle">Post</string>
 </resources>
