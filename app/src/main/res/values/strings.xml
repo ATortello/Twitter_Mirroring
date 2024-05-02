@@ -16,8 +16,7 @@
     <string name="separatorDot">·</string>
     <string name="date">Jun 16, 2022</string>
     <string name="device"> Twitter for Android</string>
-    <string name="timePosted">7:49&#x20;AM&#x20;·&#x20;</string>
-    <string name="datePosted">Jun 16,&#x20;2022&#x20;·&#x20;</string>
+    <string name="timePosted">7:49&#x20;AM&#x20;·&#x20;Jun 16,&#x20;2022&#x20;·&#x20;</string>
 
     <!-- Common info: Indicators texts -->
     <string name="cantRetweets">120</string>

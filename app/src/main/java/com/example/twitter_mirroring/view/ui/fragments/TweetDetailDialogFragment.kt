@@ -15,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.twitter_mirroring.R
 import com.example.twitter_mirroring.databinding.FragmentTweetDetailDialogBinding
 import com.example.twitter_mirroring.model.TweetData
+import kotlinx.android.synthetic.main.fragment_tweet_detail_dialog.cvMediaDetail
 import kotlinx.android.synthetic.main.fragment_tweet_detail_dialog.llMediaDetail
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -43,13 +44,14 @@ class TweetDetailDialogFragment : DialogFragment() {
     {
         super.onViewCreated(view, savedInstanceState)
 
-        //Set icon for dialog fragment and action when closing Tweet's detailed information
+        /*Set icon for dialog fragment and action when closing Tweet's detailed information*/
         binding.toolbarTweetDetail.navigationIcon = ContextCompat.getDrawable(view.context,R.drawable.ic_go_back)
         binding.toolbarTweetDetail.navigationIcon?.setTint(Color.WHITE)
         binding.toolbarTweetDetail.setNavigationOnClickListener { dismiss() }
         binding.toolbarTweetDetail.setTitle(R.string.toolbarTweetDetailTitle)
         binding.toolbarTweetDetail.setTitleTextColor(Color.WHITE)
 
+        /*With the this the frontend and the logic are connected*/
         val tweet = arguments?.getSerializable("tweet") as TweetData
         val photo1: ImageView = binding.ivTopLeftImageDetail
         val photo2: ImageView = binding.ivTopRightImageDetail
@@ -59,22 +61,36 @@ class TweetDetailDialogFragment : DialogFragment() {
         val video2: VideoView = binding.ivTopRightVideoDetail
         val video3: VideoView = binding.ivBottomLeftVideoDetail
         val video4: VideoView = binding.ivBottomRightVideoDetail
+
         val visibility = View.VISIBLE
+        val noVisibility = View.GONE
         val context = requireContext()
         val circleTransformation = RequestOptions.circleCropTransform()
         val noTransformation = RequestOptions.noTransformation()
         val fileType : Array<String> = arrayOf("","","","")
         val message = "ARTD - No image/gif or video link. Please check!"
 
+        /*Setting initial visibility of elements*/
+        cvMediaDetail!!.visibility = noVisibility
+        llMediaDetail!!.visibility = noVisibility
+        photo1.visibility = noVisibility
+        photo2.visibility = noVisibility
+        photo3.visibility = noVisibility
+        photo4.visibility = noVisibility
+        video1.visibility = noVisibility
+        video2.visibility = noVisibility
+        video3.visibility = noVisibility
+        video4.visibility = noVisibility
+
         /*Setting images: Profile, verified logo (if applies) and media content*/
         showImage(context, tweet.profilePhoto, circleTransformation, binding.ivProfilePictureDetail)
 
-        //Showing logo or not
-        if(tweet.verifiedLogo) binding.ivVerifiedLogoDetail.visibility = View.VISIBLE
-        else binding.ivVerifiedLogoDetail.visibility = View.GONE
+        /*Showing logo or not*/
+        if(tweet.verifiedLogo) binding.ivVerifiedLogoDetail.visibility = visibility
+        else binding.ivVerifiedLogoDetail.visibility = noVisibility
 
-        //Managing CardView elements to show images get from Firestore
-        if (!tweet.hasMedia) binding.cvMediaDetail.visibility = View.GONE
+        /*Managing CardView elements to show images get from Firestore*/
+        if (!tweet.hasMedia) binding.cvMediaDetail.visibility = noVisibility
         else {  binding.cvMediaDetail.visibility = visibility
             fileType[0] = mediaSelector(tweet.photoUrl1)
             fileType[1] = mediaSelector(tweet.photoUrl2)
@@ -160,37 +176,17 @@ class TweetDetailDialogFragment : DialogFragment() {
         /*Setting texts:*/
         binding.tvCantLikesDetail.text = tweet.cantLikes.toString()
         binding.tvCantRetweetsDetail.text = tweet.cantRetweetsAndReposts.toString()
-        binding.tvViewsDetail.text = tweet.cantViews.toString()
+        binding.tvViewsDetail.text = "${tweet.cantViews} "
         binding.tvPublicNameDetail.text = tweet.publicName
         binding.tvRealUsernameDetail.text = "@${tweet.realUsername}"
         binding.tvTweetContentDetail.text = tweet.tweetContent
 
-        /*Calculating time between system's current date and post's dates from Firestore:*/
-        val diffInSeconds = (System.currentTimeMillis() - tweet.hourAndDate.time)/1000
+        /*Setting and showing time for post's detailed page:*/
         val cal = Calendar.getInstance()
         cal.time = tweet.hourAndDate
-
-        //Setting date formats according to how long the tweets were posted
-        val pattern = when(diffInSeconds) {
-            in 0..59 -> "s"
-            in 60..3599 -> "m"
-            in 3600..86399 -> "h"
-            in 86400..604799 -> "d"
-            in 604800..2678399 -> "d MMM"
-            else -> "d MMM yy"
-        }
-
-        //Setting texts to show depending the date's format previously configured
-        val simpleDateFormat = SimpleDateFormat(pattern)
-        val timeToDisplay = when(pattern) {
-            "s" -> "${ timeGap(cal.time, simpleDateFormat) }s"
-            "m" -> "${ timeGap(cal.time, simpleDateFormat) }m"
-            "h" -> "${ timeGap(cal.time, simpleDateFormat) }h"
-            "d" -> "${ timeGap(cal.time, simpleDateFormat) }d"
-            "d MMM" -> simpleDateFormat.format(cal.time)
-            else -> simpleDateFormat.format(cal.time)
-        }
-        binding.tvTimePostedDetail.setText(" · $timeToDisplay")
+        val timePostFormat = SimpleDateFormat("hh:mm a · dd MMM yy · ")
+        val timeToDisplay = timePostFormat.format(cal.time)
+        binding.tvTimeAndDatePostedDetail.setText(timeToDisplay)
     }
 
     fun mediaSelector(mediaURL: String) : String {
@@ -210,10 +206,6 @@ class TweetDetailDialogFragment : DialogFragment() {
             .apply(requestOptions)
             .into(imageView!!)
     }
-
-    //Difference between the current date and the post's dates from Firestore
-    fun timeGap(firestoreDate: Date, simpleDateFormat: SimpleDateFormat) : Int =
-        (simpleDateFormat.format(System.currentTimeMillis()).toInt()) - (simpleDateFormat.format(firestoreDate).toInt())
 
     //Setting dialog screen size to match parent both width and height
     override fun onStart() {
