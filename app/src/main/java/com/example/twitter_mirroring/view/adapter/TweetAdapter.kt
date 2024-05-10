@@ -173,10 +173,10 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         }
 
         /*Setting texts:*/
-        p0.tvCantLikesFeed!!.text = tweet.cantLikes.toString()
-        p0.tvCantRepliesFeed!!.text = tweet.cantReplies.toString()
-        p0.tvCantRetweetsFeed!!.text = tweet.cantRetweetsAndReposts.toString()
-        p0.tvCantViewsFeed!!.text = tweet.cantViews.toString()
+        p0.tvCantLikesFeed!!.text = castingMetrics(tweet.cantLikes)
+        p0.tvCantRepliesFeed!!.text = castingMetrics(tweet.cantReplies)
+        p0.tvCantRetweetsFeed!!.text = castingMetrics(tweet.cantRetweetsAndReposts)
+        p0.tvCantViewsFeed!!.text = castingMetrics(tweet.cantViews)
         p0.tvPublicNameFeed!!.text = tweet.publicName
         p0.tvRealUsernameFeed!!.text = "@${tweet.realUsername}"
         p0.tvTweetContentFeed!!.text = tweet.tweetContent
@@ -238,5 +238,50 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         listOfTweets.clear()
         listOfTweets.addAll(data)
         notifyDataSetChanged()
+    }
+
+    //Fixing Views count for Tweet's Homepage
+    fun castingMetrics(quantity: Long) : String {
+        var textToReturn : String
+
+        val metricsFlag = when (quantity) {
+            in 0..999 -> ""
+            in 1_000..999_999 -> "K"
+            in 1_000_000..999_999_999 -> "M"
+            else -> "G"
+        }
+
+        val metrics = when (quantity) {
+            in 0..999 -> "%.1f".format(quantity.toDouble() / 1)
+            in 1_000..999_999 -> "%.1f".format(quantity.toDouble() / 1000)
+            in 1_000_000..999_999_999 -> "%.1f".format(quantity.toDouble() / 1000000)
+            else -> ""
+        }
+        textToReturn = metrics.replace(",",".")
+
+        val modValue = when (metricsFlag) {
+            "" -> 0
+            "K"-> quantity % 1000
+            "M"-> quantity % 1000000
+            else -> quantity % 1000000000
+        }
+
+        if (modValue.toInt() != 0) {
+            textToReturn += when (metricsFlag) {
+                "" -> ""
+                "K"-> "K "
+                "M"-> "M "
+                else -> "G "
+            }
+        }
+        else { textToReturn = when (metricsFlag) {
+                "" -> "$quantity"
+                "K"-> "${quantity / 1_000}K "
+                "M"-> "${quantity / 1_000_000}M "
+                else -> "${quantity / 1_000_000_000}G "
+            }
+        }
+
+        return textToReturn
     }
 }

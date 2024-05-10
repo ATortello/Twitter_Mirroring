@@ -15,11 +15,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.twitter_mirroring.R
 import com.example.twitter_mirroring.databinding.FragmentTweetDetailDialogBinding
 import com.example.twitter_mirroring.model.TweetData
-import kotlinx.android.synthetic.main.fragment_tweet_detail_dialog.cvMediaDetail
-import kotlinx.android.synthetic.main.fragment_tweet_detail_dialog.llMediaDetail
 import java.text.SimpleDateFormat
 import java.util.Calendar
-import java.util.Date
 
 class TweetDetailDialogFragment : DialogFragment() {
 
@@ -71,8 +68,8 @@ class TweetDetailDialogFragment : DialogFragment() {
         val message = "ARTD - No image/gif or video link. Please check!"
 
         /*Setting initial visibility of elements*/
-        cvMediaDetail!!.visibility = noVisibility
-        llMediaDetail!!.visibility = noVisibility
+        binding.cvMediaDetail.visibility = noVisibility
+        binding.llMediaDetail.visibility = noVisibility
         photo1.visibility = noVisibility
         photo2.visibility = noVisibility
         photo3.visibility = noVisibility
@@ -109,7 +106,7 @@ class TweetDetailDialogFragment : DialogFragment() {
                     "video" -> showVideo(tweet.photoUrl1, video1)
                     else -> print(message) }
 
-                2 -> { llMediaDetail!!.visibility = visibility
+                2 -> { binding.llMediaDetail.visibility = visibility
                     when (fileType[0]) {
                         "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, photo1)
                         "video" -> showVideo(tweet.photoUrl1, video1)
@@ -122,7 +119,7 @@ class TweetDetailDialogFragment : DialogFragment() {
                             showVideo(tweet.photoUrl2, video2) }
                         else -> print(message) } }
 
-                3 -> { llMediaDetail!!.visibility = visibility
+                3 -> { binding.llMediaDetail.visibility = visibility
                     when (fileType[0]) {
                         "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, photo1)
                         "video" -> showVideo(tweet.photoUrl1, video1)
@@ -142,7 +139,7 @@ class TweetDetailDialogFragment : DialogFragment() {
                             showVideo(tweet.photoUrl3, video4) }
                         else -> print(message) } }
 
-                4 -> { llMediaDetail!!.visibility = visibility
+                4 -> { binding.llMediaDetail.visibility = visibility
                     when (fileType[0]) {
                         "img/gif" -> showImage(context, tweet.photoUrl1, noTransformation, photo1)
                         "video" -> showVideo(tweet.photoUrl1, video1)
@@ -174,9 +171,9 @@ class TweetDetailDialogFragment : DialogFragment() {
         }
 
         /*Setting texts:*/
-        binding.tvCantLikesDetail.text = tweet.cantLikes.toString()
-        binding.tvCantRetweetsDetail.text = tweet.cantRetweetsAndReposts.toString()
-        binding.tvViewsDetail.text = "${tweet.cantViews} "
+        binding.tvCantLikesDetail.text = castingMetrics(tweet.cantLikes)
+        binding.tvCantRetweetsDetail.text = castingMetrics(tweet.cantRetweetsAndReposts)
+        binding.tvViewsDetail.text = castingMetrics(tweet.cantViews)
         binding.tvPublicNameDetail.text = tweet.publicName
         binding.tvRealUsernameDetail.text = "@${tweet.realUsername}"
         binding.tvTweetContentDetail.text = tweet.tweetContent
@@ -213,5 +210,50 @@ class TweetDetailDialogFragment : DialogFragment() {
         dialog
             ?.window
             ?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
+    }
+
+    //Fixing Views count for Tweet's detailed page
+    fun castingMetrics(quantity: Long) : String {
+        var textToReturn : String
+
+        val metricsFlag = when (quantity) {
+            in 0..999 -> ""
+            in 1_000..999_999 -> "K"
+            in 1_000_000..999_999_999 -> "M"
+            else -> "G"
+        }
+
+        val metrics = when (quantity) {
+            in 0..999 -> "%.1f".format(quantity.toDouble() / 1)
+            in 1_000..999_999 -> "%.1f".format(quantity.toDouble() / 1000)
+            in 1_000_000..999_999_999 -> "%.1f".format(quantity.toDouble() / 1000000)
+            else -> ""
+        }
+        textToReturn = metrics.replace(",",".")
+
+        val modValue = when (metricsFlag) {
+            "" -> 0
+            "K"-> quantity % 1000
+            "M"-> quantity % 1000000
+            else -> quantity % 1000000000
+        }
+
+        if (modValue.toInt() != 0) {
+            textToReturn += when (metricsFlag) {
+                "" -> ""
+                "K"-> "K "
+                "M"-> "M "
+                else -> "G "
+            }
+        }
+        else { textToReturn = when (metricsFlag) {
+                "" -> "$quantity"
+                "K"-> "${quantity / 1_000}K "
+                "M"-> "${quantity / 1_000_000}M "
+                else -> "${quantity / 1_000_000_000}G "
+            }
+        }
+
+        return textToReturn
     }
 }
