@@ -3,10 +3,15 @@ package com.example.twitter_mirroring.view.ui.fragments
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.VideoView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
@@ -176,7 +181,7 @@ class TweetDetailDialogFragment : DialogFragment() {
         binding.tvViewsDetail.text = castingMetrics(tweet.cantViews)
         binding.tvPublicNameDetail.text = tweet.publicName
         binding.tvRealUsernameDetail.text = "@${tweet.realUsername}"
-        binding.tvTweetContentDetail.text = tweet.tweetContent
+        highlightHashtagAndMentions(tweet.tweetContent, binding.tvTweetContentDetail)
 
         /*Setting and showing time for post's detailed page:*/
         val cal = Calendar.getInstance()
@@ -255,5 +260,81 @@ class TweetDetailDialogFragment : DialogFragment() {
         }
 
         return textToReturn
+    }
+
+    /*Giving color to mentions or hashtags within the Tweet*/
+    fun highlightHashtagAndMentions(content: String, tvContent: TextView) {
+        val coordinates: Array<Array<Int>> = locateHashtagAndMentionsPositions(content)
+        var startSubStringPos = 0
+
+        /*Set text color for single hashtag or mention*/
+        if (coordinates.size == 1) {
+            if (coordinates[0][0] == 0 && coordinates[0][1] == 0)
+                tvContent.text = content
+            else {
+                val spannableString = SpannableString(content)
+                val textColor = ForegroundColorSpan(Color.parseColor("#1D9BF0"))
+                spannableString.setSpan(
+                    textColor,
+                    coordinates[0][0],
+                    coordinates[0][1],
+                    Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+                tvContent.text = spannableString
+            }
+        }
+        /*Set text color for multiple hashtags or mentions*/
+        else {
+            /*Step 1. Preparing data if there are more than one account mention or hashtag*/
+            val spannableStringBuilder = SpannableStringBuilder()
+            val stringsToEdit = Array(coordinates.size + 1) { "" }
+
+            for (i in stringsToEdit.indices) {
+                if (i <= coordinates.size - 1) {
+                    stringsToEdit[i] = content.substring(startSubStringPos, coordinates[i][1] + 1)
+                    startSubStringPos = coordinates[i][1] + 1
+                }
+                else stringsToEdit[i] = content.substring(startSubStringPos)
+            }
+
+            /*Step 2. Setting color for mentions or hashtags*/
+            for (j in stringsToEdit.indices) {
+                val textColor = ForegroundColorSpan(Color.parseColor("#1D9BF0"))
+                spannableStringBuilder.append(stringsToEdit[j])
+
+                if (j < stringsToEdit.size - 1) {
+                    spannableStringBuilder.setSpan(
+                        textColor,
+                        coordinates[j][0],
+                        coordinates[j][1],
+                        Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+                }
+            }
+            tvContent.text = spannableStringBuilder
+        }
+    }
+
+    /*Finding positions to later change the color of the mentioned accounts or hashtags*/
+    fun locateHashtagAndMentionsPositions(content: String) : Array<Array<Int>> {
+        val qty = content.count { it == '@' || it == '#' }
+        val arrayStartChars = charArrayOf('@' , '#')
+        val arrayStopChars = charArrayOf('.' , ' ')
+        var locations = Array(qty) { Array(2) { 0 } }
+        var startPos: Int
+        var endPos = 0
+        /*println("Initial values: ${locations.contentDeepToString()}")*/
+
+        when (qty) {
+            0 -> { locations = Array(1) { Array(2) { 0 } } }
+            1 -> { startPos = content.indexOfAny(arrayStartChars, 0, false)
+                endPos = content.indexOfAny(arrayStopChars, startPos, false)
+                locations[0][0] = startPos; locations[0][1] = endPos }
+            else -> { for (i in 0 until qty) {
+                startPos = content.indexOfAny(arrayStartChars, endPos, false)
+                endPos = content.indexOfAny(arrayStopChars, startPos, false)
+                locations[i][0] = startPos
+                locations[i][1] = endPos } }
+        }
+        /*println("Final values: ${locations.contentDeepToString()}")*/
+        return locations
     }
 }

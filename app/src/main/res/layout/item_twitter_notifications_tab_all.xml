@@ -150,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/notificationsFragmentLikes_ShowAll"
-                android:textColor="@color/hashtagColor"/>
+                android:textColor="@color/hashtagAndMentionColor"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -296,7 +296,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/marginSmallAllSides"
                     android:text="@string/notificationsFragmentComment_MyPublicName"
-                    android:textColor="@color/hashtagColor"/>
+                    android:textColor="@color/hashtagAndMentionColor"/>
             </LinearLayout>
 
             <TextView

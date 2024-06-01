@@ -1,6 +1,11 @@
 package com.example.twitter_mirroring.view.adapter
 
 import android.content.Context
+import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -179,7 +184,7 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         p0.tvCantViewsFeed!!.text = castingMetrics(tweet.cantViews)
         p0.tvPublicNameFeed!!.text = tweet.publicName
         p0.tvRealUsernameFeed!!.text = "@${tweet.realUsername}"
-        p0.tvTweetContentFeed!!.text = tweet.tweetContent
+        highlightHashtagAndMentions(tweet.tweetContent, p0.tvTweetContentFeed!!)
 
         /*Calculating time between system's current date and post's dates from Firestore:*/
         val diffInSeconds = (System.currentTimeMillis() - tweet.hourAndDate.time)/1000
@@ -199,10 +204,10 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
             //Setting texts to show depending the date's format previously configured
             val simpleDateFormat = SimpleDateFormat(pattern)
             val timeToDisplay = when(pattern) {
-                "s" -> "${ timeGap(cal.time, simpleDateFormat) }s"
-                "m" -> "${ timeGap(cal.time, simpleDateFormat) }m"
-                "h" -> "${ timeGap(cal.time, simpleDateFormat) }h"
-                "d" -> "${ timeGap(cal.time, simpleDateFormat) }d"
+                "s" -> "${ timeGap(cal.time, simpleDateFormat, 1) }s"
+                "m" -> "${ timeGap(cal.time, simpleDateFormat, 60) }m"
+                "h" -> "${ timeGap(cal.time, simpleDateFormat, 3600) }h"
+                "d" -> "${ timeGap(cal.time, simpleDateFormat, 84600) }d"
                 "d MMM" -> simpleDateFormat.format(cal.time)
                 else -> simpleDateFormat.format(cal.time)
             }
@@ -231,8 +236,16 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
     }
 
     //Difference between the current date and the post's dates from Firestore
-    fun timeGap(firestoreDate: Date, simpleDateFormat: SimpleDateFormat) : Int =
-        (simpleDateFormat.format(System.currentTimeMillis()).toInt()) - (simpleDateFormat.format(firestoreDate).toInt())
+    fun timeGap(firestoreDate: Date, simpleDateFormat: SimpleDateFormat, constant: Int) : Int {
+        val timeGap = (simpleDateFormat.format(System.currentTimeMillis()).toInt()) - (simpleDateFormat.format(firestoreDate).toInt())
+
+        when (constant) {
+            1   -> return timeGap
+            60  -> return timeGap / 60
+            3600  -> return timeGap / 3600
+            else   -> return timeGap / 86400
+        }
+    }
 
     fun updateData(data: List<TweetData>) {
         listOfTweets.clear()
@@ -283,5 +296,81 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
         }
 
         return textToReturn
+    }
+
+    /*Giving color to mentions or hashtags within the Tweet*/
+    fun highlightHashtagAndMentions(content: String, tvContent: TextView) {
+        val coordinates: Array<Array<Int>> = locateHashtagAndMentionsPositions(content)
+        var startSubStringPos = 0
+
+        /*Set text color for single hashtag or mention*/
+        if (coordinates.size == 1) {
+            if (coordinates[0][0] == 0 && coordinates[0][1] == 0)
+                tvContent.text = content
+            else {
+                val spannableString = SpannableString(content)
+                val textColor = ForegroundColorSpan(Color.parseColor("#1D9BF0"))
+                spannableString.setSpan(
+                    textColor,
+                    coordinates[0][0],
+                    coordinates[0][1],
+                    Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+                tvContent.text = spannableString
+            }
+        }
+        /*Set text color for multiple hashtags or mentions*/
+        else {
+            /*Step 1. Preparing data if there are more than one account mention or hashtag*/
+            val spannableStringBuilder = SpannableStringBuilder()
+            val stringsToEdit = Array(coordinates.size + 1) { "" }
+
+            for (i in stringsToEdit.indices) {
+                if (i <= coordinates.size - 1) {
+                    stringsToEdit[i] = content.substring(startSubStringPos, coordinates[i][1] + 1)
+                    startSubStringPos = coordinates[i][1] + 1
+                }
+                else stringsToEdit[i] = content.substring(startSubStringPos)
+            }
+
+            /*Step 2. Setting color for mentions or hashtags*/
+            for (j in stringsToEdit.indices) {
+                val textColor = ForegroundColorSpan(Color.parseColor("#1D9BF0"))
+                spannableStringBuilder.append(stringsToEdit[j])
+
+                if (j < stringsToEdit.size - 1) {
+                    spannableStringBuilder.setSpan(
+                        textColor,
+                        coordinates[j][0],
+                        coordinates[j][1],
+                        Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+                }
+            }
+            tvContent.text = spannableStringBuilder
+        }
+    }
+
+    /*Finding positions to later change the color of the mentioned accounts or hashtags*/
+    fun locateHashtagAndMentionsPositions(content: String) : Array<Array<Int>> {
+        val qty = content.count { it == '@' || it == '#' }
+        val arrayStartChars = charArrayOf('@' , '#')
+        val arrayStopChars = charArrayOf('.' , ' ')
+        var locations = Array(qty) { Array(2) { 0 } }
+        var startPos: Int
+        var endPos = 0
+        /*println("Initial values: ${locations.contentDeepToString()}")*/
+
+        when (qty) {
+            0 -> { locations = Array(1) { Array(2) { 0 } } }
+            1 -> { startPos = content.indexOfAny(arrayStartChars, 0, false)
+                endPos = content.indexOfAny(arrayStopChars, startPos, false)
+                locations[0][0] = startPos; locations[0][1] = endPos }
+            else -> { for (i in 0 until qty) {
+                startPos = content.indexOfAny(arrayStartChars, endPos, false)
+                endPos = content.indexOfAny(arrayStopChars, startPos, false)
+                locations[i][0] = startPos
+                locations[i][1] = endPos } }
+        }
+        /*println("Final values: ${locations.contentDeepToString()}")*/
+        return locations
     }
 }
