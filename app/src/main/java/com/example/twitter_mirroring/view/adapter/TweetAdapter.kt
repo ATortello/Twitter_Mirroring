@@ -204,10 +204,10 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
             //Setting texts to show depending the date's format previously configured
             val simpleDateFormat = SimpleDateFormat(pattern)
             val timeToDisplay = when(pattern) {
-                "s" -> "${ timeGap(cal.time, simpleDateFormat, 1) }s"
-                "m" -> "${ timeGap(cal.time, simpleDateFormat, 60) }m"
-                "h" -> "${ timeGap(cal.time, simpleDateFormat, 3600) }h"
-                "d" -> "${ timeGap(cal.time, simpleDateFormat, 84600) }d"
+                "s" -> "${ timeGap(cal.time, 1) }s"
+                "m" -> "${ timeGap(cal.time, 60) }m"
+                "h" -> "${ timeGap(cal.time, 3600) }h"
+                "d" -> "${ timeGap(cal.time, 84600) }d"
                 "d MMM" -> simpleDateFormat.format(cal.time)
                 else -> simpleDateFormat.format(cal.time)
             }
@@ -236,14 +236,16 @@ class TweetAdapter(val tweetListener: TweetListener) : RecyclerView.Adapter<Twee
     }
 
     //Difference between the current date and the post's dates from Firestore
-    fun timeGap(firestoreDate: Date, simpleDateFormat: SimpleDateFormat, constant: Int) : Int {
-        val timeGap = (simpleDateFormat.format(System.currentTimeMillis()).toInt()) - (simpleDateFormat.format(firestoreDate).toInt())
+    fun timeGap(firestoreDate: Date, constant: Int) : Int {
+        val currentTimestamp = System.currentTimeMillis() / 1000
+        val dateOfTweet = firestoreDate.time / 1000
+        val timeGap = (currentTimestamp - dateOfTweet).toInt()
 
         when (constant) {
-            1   -> return timeGap
-            60  -> return timeGap / 60
-            3600  -> return timeGap / 3600
-            else   -> return timeGap / 86400
+            1   -> return timeGap / constant
+            60  -> return timeGap / constant
+            3600  -> return timeGap / constant
+            else   -> return timeGap / constant
         }
     }
 
